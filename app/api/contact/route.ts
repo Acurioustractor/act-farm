@@ -96,17 +96,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Trigger workflow if configured
-    // TODO: Fix workflow trigger API signature
-    // const workflowId = getWorkflowIdForInterest(interest);
-    // if (workflowId && contact?.id) {
-    //   try {
-    //     await ghlClient.workflows.trigger(workflowId, {
-    //       contactId: contact.id,
-    //     });
-    //   } catch (error) {
-    //     console.error('Failed to trigger workflow:', error);
-    //   }
-    // }
+    const workflowId = getWorkflowIdForInterest(interest);
+    if (workflowId && contact?.id) {
+      try {
+        await ghlClient.workflows.trigger(workflowId, contact.id);
+      } catch (error) {
+        console.error('Failed to trigger workflow:', error);
+        // Don't fail the whole request if workflow trigger fails
+      }
+    }
 
     return NextResponse.json({
       success: true,
