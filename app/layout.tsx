@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
+import UnifiedFooter from "@/components/shared/UnifiedFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +33,18 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
+        <UnifiedFooter
+          currentProject="ACT Farm"
+          showProjects={true}
+          customLinks={[
+            { label: "About", href: "/about" },
+            { label: "Activities", href: "/activities" },
+            { label: "Residencies", href: "/residencies" },
+            { label: "Accommodation", href: "/accommodation" },
+            { label: "Connect", href: "/connect" },
+          ]}
+          contactEmail="hello@acurioustractor.com"
+        />
       </body>
     </html>
   );

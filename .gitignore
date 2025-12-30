@@ -39,3 +39,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude/Cursor IDE files
+.claude/
+
+# GitHub workflows
+.github/workflows/
+
+# Screenshots
+*.png
+Screenshot*.png
+
+# Global scripts symlink
+scripts-global
+
+# Draft files
+DRAFT_*.md
+
+# Integration docs (if temporary)
+*_INTEGRATION_SETUP.md
+GHL_INTEGRATION_SETUP.md
+
+# Backup files
+.env.local.backup*
+*.backup-*

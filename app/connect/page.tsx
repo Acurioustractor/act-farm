@@ -10,11 +10,38 @@ export default function ConnectPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form handling will be implemented with GHL or other form service
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We will be in touch soon.');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', interest: '', message: '' });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        console.error('Form submission failed:', data);
+        alert(data.error || 'There was an error submitting your inquiry. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your inquiry. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -166,11 +193,19 @@ export default function ConnectPage() {
                     />
                   </div>
 
+                  {submitSuccess && (
+                    <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-3 rounded-md">
+                      <p className="font-semibold">✓ Thank you for your inquiry!</p>
+                      <p className="text-sm mt-1">We'll be in touch within 3-5 business days.</p>
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+                    disabled={isSubmitting}
+                    className="w-full bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>
