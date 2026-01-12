@@ -63,3 +63,5 @@ GHL_INTEGRATION_SETUP.md
 # Backup files
 .env.local.backup*
 *.backup-*
+.env.local
+logs/

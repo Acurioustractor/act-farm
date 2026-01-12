@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import UnifiedFooter from "@/components/shared/UnifiedFooter";
+import ChatWidget from "@/components/ChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
           ]}
           contactEmail="hello@acurioustractor.com"
         />
+        <ChatWidget />
       </body>
     </html>
   );
