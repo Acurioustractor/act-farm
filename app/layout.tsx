@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "A Curious Tractor Farm | Black Cockatoo Valley",
-  description: "Low-impact eco-residencies and R&D prototyping at Black Cockatoo Valley. Immersive conservation-first experiences on Jinibara lands.",
+  description: "Conservation-first residencies and regenerative practice on 150 acres of Jinibara Country. Part of the A Curious Tractor ecosystem—growing seeds of justice, art, and shared stewardship.",
 };
 
 export default function RootLayout({

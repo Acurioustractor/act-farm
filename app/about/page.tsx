@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About | A Curious Tractor Farm',
-  description: 'Learn about Black Cockatoo Valley, our conservation-first approach, and the LCAA framework guiding our work on Jinibara lands.',
+  description: 'Black Cockatoo Valley on Jinibara Country—conservation-first land practice guided by LCAA, building toward community co-stewardship. Part of A Curious Tractor.',
 };
 
 export default function AboutPage() {
@@ -11,10 +11,13 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-stone-900 to-emerald-900 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">
+          <p className="text-sm uppercase tracking-widest text-stone-300 mb-4">
+            On Jinibara Country
+          </p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">About Black Cockatoo Valley</h1>
           <p className="text-2xl text-stone-200 leading-relaxed">
-            150 acres of threatened species habitat on Jinibara lands. A living laboratory for
-            conservation, regenerative practice, and careful co-stewardship.
+            150 acres of threatened species habitat. A living laboratory for
+            conservation, regenerative practice, and the slow work of handing over the keys.
           </p>
         </div>
       </section>
@@ -22,20 +25,25 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">Our Purpose</h2>
+          <p className="text-sm uppercase tracking-widest text-emerald-700 mb-4 text-center">
+            Part of the A Curious Tractor ecosystem
+          </p>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">Why This Land Matters</h2>
           <div className="prose prose-lg max-w-none text-stone-700">
             <p className="text-xl mb-6 text-center">
-              We protect and restore threatened species habitat while exploring low-impact models
-              for R&D, community wellbeing, and eventual co-stewardship transition.
+              A Curious Tractor is a regenerative innovation ecosystem partnering with marginalised
+              communities to dismantle extractive systems. Like a tractor's power take-off, we transfer
+              resources, knowledge, and capacity to community-led initiatives—then hand over the keys.
             </p>
             <p className="mb-6">
-              Black Cockatoo Valley is not a conventional retreat, farm, or conservation reserve. It's a place
-              where ecology comes first, where human activity strengthens rather than extracts, and where
-              we prototype pathways toward genuine community governance.
+              Black Cockatoo Valley is where that work meets the soil. Not a retreat, not a farm stay,
+              not a conservation reserve. It's a place where ecology comes first, where human activity
+              strengthens rather than extracts, and where we prototype pathways toward genuine
+              community governance.
             </p>
             <p>
-              Every residency, workshop, and gathering is a careful expression—testing what's possible when
-              conservation, research, and regenerative practice align.
+              Every residency, workshop, and gathering is a careful expression of LCAA—Listen, Curiosity,
+              Action, Art—testing what's possible when conservation, research, and regenerative practice align.
             </p>
           </div>
         </div>
@@ -76,15 +84,15 @@ export default function AboutPage() {
       {/* The Land */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">The Land</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8">The Country</h2>
           <div className="prose prose-lg max-w-none text-stone-700">
             <p className="mb-6">
-              Black Cockatoo Valley spans 150 acres on <strong>Jinibara lands</strong> near Witta, Queensland.
-              The property features views to the top of the Mary River, with creeks and forest down to Elaman Creek.
+              Black Cockatoo Valley spans 150 acres on <strong>Jinibara Country</strong> near Witta, Queensland.
+              Views stretch to the Mary River headwaters, with creeks and forest winding down to Elaman Creek.
             </p>
             <p className="mb-6">
               This is <strong>threatened species habitat</strong>. Our primary responsibility is protection and
-              restoration—everything else serves that purpose.
+              restoration—everything else serves that purpose. The land is the teacher; we are the students.
             </p>
             <div className="bg-emerald-50 p-8 rounded-lg border-l-4 border-emerald-700 my-8">
               <h3 className="text-2xl font-semibold text-stone-900 mb-4">Conservation Commitments</h3>
@@ -118,11 +126,12 @@ export default function AboutPage() {
       {/* Business Model */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">How We Sustain This Work</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8">How the Harvest Sustains the Soil</h2>
           <div className="prose prose-lg max-w-none text-stone-700">
             <p className="mb-6">
-              We operate on a <strong>low-volume, premium model</strong> that generates stable revenue without
-              compromising conservation. This is financially viable through:
+              We operate on a <strong>low-volume, conservation-first model</strong> that generates stable revenue
+              without extracting from the land or community. 40% of profits flow to community ownership—because
+              value belongs where it's grown.
             </p>
             <div className="grid md:grid-cols-2 gap-6 my-8">
               <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -147,8 +156,8 @@ export default function AboutPage() {
               </div>
             </div>
             <p>
-              This model makes conservation economically sustainable without requiring extractive growth.
-              We prove that protecting habitat can be financially viable.
+              This model proves that protecting habitat can be economically sustainable—without
+              extractive growth, luxury positioning, or glossy marketing. We separate profit from purpose by keeping them aligned.
             </p>
           </div>
         </div>
@@ -175,9 +184,10 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-stone-900 mb-6">Want to Learn More?</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-6">Walk With Us</h2>
           <p className="text-lg text-stone-700 mb-8">
-            Explore our activities, residencies, and ways to engage with the work at Black Cockatoo Valley.
+            Explore the seeds we're growing—residencies, workshops, and ways to
+            steward this land alongside us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

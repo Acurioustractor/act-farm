@@ -12,12 +12,12 @@ export default function JunesPatchPage() {
       <section className="bg-gradient-to-br from-emerald-800 to-teal-700 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Healthcare Worker Wellbeing Program
+            A Seed Taking Root on Jinibara Country
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">June's Patch</h1>
           <p className="text-2xl md:text-3xl text-emerald-50 leading-relaxed">
-            A prescription to nature project designed to nourish healthcare workers and, in turn,
-            strengthen patient and community wellbeing.
+            A prescription to nature—co-designed with healthcare workers to nourish
+            the people holding the health system, so they can better hold everyone else.
           </p>
         </div>
       </section>
@@ -25,19 +25,22 @@ export default function JunesPatchPage() {
       {/* Core Concept */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">The Core Idea</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8">The Soil This Grows From</h2>
           <div className="prose prose-lg max-w-none text-stone-700">
             <p className="text-xl mb-6 leading-relaxed">
               <strong>If we look after the people holding the health system, they can better look after everyone else.</strong>
             </p>
             <p className="mb-6">
-              We do that through <strong>fresh food</strong>, <strong>time on land</strong>, and{' '}
-              <strong>experience-based wellbeing</strong> rather than another clinical program.
+              Not another clinical program. <strong>Fresh food</strong>, <strong>time on Country</strong>, and{' '}
+              <strong>experience-based wellbeing</strong>—hands in soil, shared meals, and
+              restoration that starts with the carers.
             </p>
             <p className="mb-6">
               At its heart, June's Patch is a <strong>food garden + experience subscription</strong>: participants
               receive produce and are invited into restorative, practical experiences—gardening, workshops, tours,
               shared meals, non-clinical outdoor time—that rebuild energy, connection, and agency.
+              This is LCAA in practice: listening to healthcare workers, getting curious about what
+              actually restores them, acting through food and land, and sharing the story.
             </p>
           </div>
         </div>
@@ -46,22 +49,22 @@ export default function JunesPatchPage() {
       {/* How It Works */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">How It Works</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">How It Grows</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ProcessCard
               step="1"
-              title="Research → Design → Test"
-              description="Start by grounding the idea in evidence and local needs, then design the space and experience, then pilot and learn in the real world."
+              title="Listen → Design → Test"
+              description="Ground the work in evidence and community voice. Design the space and experience together. Pilot and learn in the real world."
             />
             <ProcessCard
               step="2"
-              title="Partnership-Led"
-              description="Built with health workers (Wishlist community), researchers (University of the Sunshine Coast), and aligned community collaborators."
+              title="Community-Led Partnerships"
+              description="Co-designed with health workers (Wishlist), researchers (USC), and community collaborators. Communities lead; we support."
             />
             <ProcessCard
               step="3"
-              title="Place-Based"
-              description="Operates at Black Cockatoo Valley in Witta, so the land itself becomes part of the intervention."
+              title="Rooted in Country"
+              description="Operates at Black Cockatoo Valley on Jinibara Country—the land itself is part of the intervention, not just the backdrop."
             />
           </div>
         </div>
@@ -70,19 +73,19 @@ export default function JunesPatchPage() {
       {/* What We're Proving */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">What We're Aiming to Prove</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8">What We're Learning</h2>
           <div className="space-y-6">
             <ProofPoint
               title="Nature + food + structured experiences can reduce stress and burnout"
-              description="Healthcare workers need more than clinical interventions—they need connection to something restorative, tangible, and outside the hospital system."
+              description="Healthcare workers need connection to something restorative, tangible, and outside the hospital system—not another program to attend."
             />
             <ProofPoint
-              title="A wellbeing investment in staff has downstream benefits"
-              description="When healthcare workers are supported and nourished, the quality of care they provide to patients and the broader community improves measurably."
+              title="Caring for carers has downstream impact"
+              description="When healthcare workers are nourished, the care they provide to patients and community strengthens measurably. The harvest flows outward."
             />
             <ProofPoint
-              title="The model can be documented, evaluated, and replicated"
-              description="Not as a rigid 'program,' but as a living place-based practice that can be adapted to other contexts and communities."
+              title="The model can be forked and replicated"
+              description="Not as a rigid program, but as a living place-based practice—forkable, adaptable, designed for communities to make it their own."
             />
           </div>
         </div>
@@ -136,19 +139,19 @@ export default function JunesPatchPage() {
       {/* Partners */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">Our Partners</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">Growing Together</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <PartnerCard
               name="Wishlist Community"
-              description="Healthcare workers and community members who understand the importance of staff wellbeing in delivering quality care."
+              description="Healthcare workers who co-design this work—not beneficiaries, but partners shaping what care looks like."
             />
             <PartnerCard
               name="University of the Sunshine Coast"
-              description="Research collaboration providing evidence-based design and evaluation of the program's impact on wellbeing outcomes."
+              description="Research collaboration grounding the practice in evidence—listening deeply to what works and why."
             />
             <PartnerCard
               name="Black Cockatoo Valley"
-              description="The land and place that serves as the foundation—150 acres of habitat restoration and regenerative practice."
+              description="The Country itself—150 acres of threatened species habitat where restoration and wellbeing grow from the same soil."
             />
           </div>
         </div>
@@ -157,11 +160,11 @@ export default function JunesPatchPage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-emerald-900 to-teal-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Interested in June's Patch?</h2>
+          <h2 className="text-4xl font-bold mb-6">Be Part of This Seed</h2>
           <p className="text-xl text-emerald-100 mb-8">
-            We're currently in the pilot phase with limited capacity.
-            If you're a healthcare worker interested in participating, or a researcher/organization
-            interested in collaboration, we'd love to hear from you.
+            We're in the pilot phase—growing carefully, learning from each season.
+            If you're a healthcare worker, researcher, or organisation aligned with this
+            work, we'd love to hear what you're growing too.
           </p>
           <Link
             href="/connect"

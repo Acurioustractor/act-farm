@@ -38,7 +38,7 @@ export default function ChatWidget() {
         {
           id: 'greeting',
           role: 'assistant',
-          content: "G'day! I'm the ACT Farm assistant. I can help you learn about our residencies, activities, the land, and our regenerative approach. What would you like to know?",
+          content: "G'day! I can help you learn about Black Cockatoo Valley—our residencies, workshops, June's Patch, conservation work, and how it all connects to the A Curious Tractor ecosystem. What are you curious about?",
           timestamp: new Date(),
         },
       ]);
@@ -136,7 +136,7 @@ export default function ChatWidget() {
             </div>
             <div>
               <h3 className="text-white font-semibold">ACT Farm Assistant</h3>
-              <p className="text-amber-100 text-xs">Ask about residencies, activities & more</p>
+              <p className="text-amber-100 text-xs">Ask about the land, residencies & seeds we're growing</p>
             </div>
           </div>
 

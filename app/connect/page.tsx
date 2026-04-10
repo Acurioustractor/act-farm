@@ -56,10 +56,13 @@ export default function ConnectPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-900 to-stone-800 text-white py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">Connect With Us</h1>
+          <p className="text-sm uppercase tracking-widest text-emerald-200 mb-4">
+            Part of the A Curious Tractor ecosystem
+          </p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">Walk With Us</h1>
           <p className="text-2xl text-emerald-100">
-            Interested in residencies, workshops, June's Patch, or collaboration?
-            We'd love to hear from you.
+            We don't have all the answers—but we're cultivating them together.
+            Tell us what you're growing and how it connects.
           </p>
         </div>
       </section>
@@ -70,7 +73,7 @@ export default function ConnectPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Details */}
             <div>
-              <h2 className="text-3xl font-bold text-stone-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-stone-900 mb-8">Reach Out</h2>
 
               <div className="space-y-6">
                 <ContactItem
@@ -84,32 +87,32 @@ export default function ConnectPage() {
                   icon="📍"
                   title="Location"
                   content="Black Cockatoo Valley, Witta, Queensland"
-                  sublabel="On Jinibara lands"
+                  sublabel="On Jinibara Country"
                 />
 
                 <ContactItem
                   icon="🌐"
                   title="The Harvest"
-                  content="Community workshops, meals, and CSA shares"
+                  content="Community-led workshops, shared meals, and seasonal CSA shares"
                   link="https://theharvest.acurioustractor.com"
                   linkText="Visit The Harvest →"
                 />
               </div>
 
               <div className="mt-12 bg-stone-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-stone-900 mb-4">What to Expect</h3>
+                <h3 className="text-xl font-semibold text-stone-900 mb-4">How We Work</h3>
                 <ul className="space-y-3 text-stone-700">
                   <li className="flex items-start">
                     <span className="text-emerald-700 font-bold mr-3">✓</span>
-                    <span>We respond within 3-5 business days</span>
+                    <span>We respond within 3–5 business days</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-700 font-bold mr-3">✓</span>
-                    <span>Opportunities are limited and carefully selected</span>
+                    <span>Opportunities are limited by ecology, not scarcity marketing</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-700 font-bold mr-3">✓</span>
-                    <span>We prioritize conservation-aligned inquiries</span>
+                    <span>We prioritise conservation-aligned and community-led work</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-700 font-bold mr-3">✓</span>
@@ -122,7 +125,7 @@ export default function ConnectPage() {
             {/* Contact Form */}
             <div>
               <div className="bg-stone-50 p-8 rounded-lg">
-                <h2 className="text-2xl font-bold text-stone-900 mb-6">Express Your Interest</h2>
+                <h2 className="text-2xl font-bold text-stone-900 mb-6">Tell Us What You're Growing</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-stone-900 mb-2">
@@ -218,12 +221,12 @@ export default function ConnectPage() {
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-stone-900 mb-12 text-center">
-            Explore Our Offerings
+            Seeds We're Growing
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <QuickLinkCard
               title="R&D Residencies"
-              description="Low-impact eco-residencies for conservation-aligned prototyping and research."
+              description="Conservation-first residencies for prototyping and research on Jinibara Country."
               link="/residencies"
             />
             <QuickLinkCard

@@ -10,27 +10,27 @@ const projects: Project[] = [
   {
     name: "ACT Farm",
     href: "http://localhost:3001",
-    tagline: "Regenerative tourism & residencies",
+    tagline: "Conservation-first residencies & land practice",
   },
   {
     name: "The Harvest",
     href: "http://localhost:3004",
-    tagline: "Community hub & CSA programs",
+    tagline: "Community-led CSA & seasonal gatherings",
   },
   {
     name: "Empathy Ledger",
     href: "http://localhost:3003",
-    tagline: "Storytelling & cultural wisdom",
+    tagline: "Ethical storytelling & narrative sovereignty",
   },
   {
     name: "JusticeHub",
     href: "http://localhost:3002",
-    tagline: "Youth justice & community services",
+    tagline: "Forkable justice models & community governance",
   },
   {
     name: "Goods on Country",
     href: "https://goodsoncountry.netlify.app",
-    tagline: "Funding the commons through goods",
+    tagline: "Circular economy co-designed with community",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function UnifiedFooter({
                   Stay Connected
                 </h4>
                 <p className="mb-3 text-xs text-[#7A6A55]">
-                  Get updates about our ecosystem
+                  Seeds, stories, and seasonal updates
                 </p>
                 <form className="flex gap-2">
                   <input

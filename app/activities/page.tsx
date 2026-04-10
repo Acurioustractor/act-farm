@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Activities | A Curious Tractor Farm',
-  description: 'Workshops, events, and conservation experiences at Black Cockatoo Valley, including June\'s Patch healthcare worker wellbeing program.',
+  description: 'Workshops, working bees, and seasonal gatherings at Black Cockatoo Valley on Jinibara Country. Learning by season, guided by LCAA. Part of A Curious Tractor.',
 };
 
 export default function ActivitiesPage() {
@@ -11,10 +11,14 @@ export default function ActivitiesPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-900 to-stone-800 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Activities & Experiences</h1>
+          <p className="text-sm uppercase tracking-widest text-emerald-200 mb-4">
+            On Jinibara Country
+          </p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Learning by Season</h1>
           <p className="text-xl text-emerald-100">
-            Small-group workshops, conservation experiences, and careful gatherings at Black Cockatoo Valley.
-            R&D learning aligned with our ecology-first approach.
+            Small-group workshops, conservation working bees, and careful gatherings
+            at Black Cockatoo Valley. Each one a seed—guided by the land's rhythms,
+            not a marketing calendar.
           </p>
         </div>
       </section>
@@ -25,17 +29,17 @@ export default function ActivitiesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-emerald-100 text-emerald-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Featured Program
+                A Seed Taking Root
               </div>
               <h2 className="text-4xl font-bold text-stone-900 mb-6">June's Patch</h2>
               <p className="text-xl text-stone-700 mb-6 leading-relaxed">
-                A "prescription to nature" project designed to nourish healthcare workers and, in turn,
-                strengthen patient and community wellbeing.
+                A prescription to nature—co-designed with healthcare workers to nourish
+                the people holding the health system, so they can better hold everyone else.
               </p>
               <p className="text-lg text-stone-700 mb-6">
-                If we look after the people holding the health system, they can better look after everyone else.
-                We do that through <strong>fresh food</strong>, <strong>time on land</strong>, and{' '}
-                <strong>experience-based wellbeing</strong> rather than another clinical program.
+                Not another clinical program. <strong>Fresh food</strong>, <strong>time on Country</strong>,
+                and <strong>experience-based wellbeing</strong>—hands in soil, shared meals, and
+                restoration that starts with the carers.
               </p>
               <Link
                 href="/junes-patch"
@@ -85,8 +89,8 @@ export default function ActivitiesPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">Workshops</h2>
           <p className="text-lg text-stone-700 mb-12 text-center max-w-3xl mx-auto">
-            Small-group sessions on regeneration, weed monitoring, species observation, and conservation practices.
-            Limited to maintain low-impact and protect habitat.
+            Small-group learning rooted in LCAA—listen to the land, get curious, act with care,
+            and share the story. Limited numbers protect habitat and deepen the work.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -121,10 +125,10 @@ export default function ActivitiesPage() {
       {/* Events */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">Events & Gatherings</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">Gatherings & Working Bees</h2>
           <p className="text-lg text-stone-700 mb-12 text-center max-w-3xl mx-auto">
-            Quiet, intentional gatherings that foster connection, learning, and restoration.
-            No extractive events—every gathering supports our conservation mission.
+            Quiet, intentional gatherings where the harvest is shared and the work is collective.
+            No extractive events—every gathering strengthens habitat and community.
           </p>
 
           <div className="space-y-6">
@@ -159,10 +163,10 @@ export default function ActivitiesPage() {
       {/* Booking CTA */}
       <section className="py-20 bg-emerald-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Interested in Participating?</h2>
+          <h2 className="text-4xl font-bold mb-6">Join the Work</h2>
           <p className="text-xl text-emerald-100 mb-8">
-            Activities are intentionally limited to protect habitat and maintain quality.
-            Express your interest and we'll notify you of upcoming opportunities.
+            Activities are limited by season and habitat—not scarcity marketing.
+            We don't have all the answers, but we're cultivating them together.
           </p>
           <Link
             href="/connect"

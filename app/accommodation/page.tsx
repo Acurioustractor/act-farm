@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Accommodation | A Curious Tractor Farm',
-  description: 'Eco-accommodation options at Black Cockatoo Valley. Future piloting of serene eco-stays including glamping and yurts for restorative immersion.',
+  description: 'Staying on Jinibara Country at Black Cockatoo Valley—eco-stays rooted in conservation, not consumption. Part of A Curious Tractor.',
 };
 
 export default function AccommodationPage() {
@@ -11,10 +11,13 @@ export default function AccommodationPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-stone-800 to-emerald-800 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">Accommodation</h1>
+          <p className="text-sm uppercase tracking-widest text-stone-300 mb-4">
+            On Jinibara Country
+          </p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">Staying on Country</h1>
           <p className="text-2xl text-stone-200 leading-relaxed">
-            Serene eco-stays designed for restoration and deep connection with the land.
-            No high-volume tourism—only careful, low-impact immersion.
+            Eco-stays rooted in conservation—not consumption. Quiet immersion
+            in threatened species habitat, where rest and restoration go hand in hand.
           </p>
         </div>
       </section>
@@ -22,10 +25,10 @@ export default function AccommodationPage() {
       {/* Current Offerings */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">Current Options</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">How It Works Today</h2>
           <p className="text-lg text-stone-700 text-center mb-12 max-w-2xl mx-auto">
-            Our accommodation is primarily available through R&D residencies. We're carefully piloting
-            additional eco-stay options that align with our conservation-first values.
+            Accommodation is currently available through R&D residencies. We're carefully piloting
+            additional eco-stay options—phased by season, guided by ecology.
           </p>
 
           <div className="bg-emerald-50 p-8 rounded-lg border-l-4 border-emerald-700">
@@ -47,10 +50,10 @@ export default function AccommodationPage() {
       {/* Future Piloting */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">Future Eco-Stay Concepts</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">Seeds in the Ground</h2>
           <p className="text-lg text-stone-700 text-center mb-12 max-w-3xl mx-auto">
-            We're exploring additional low-impact accommodation options that support habitat restoration
-            while offering restorative experiences. These are in the piloting phase.
+            We're growing low-impact accommodation concepts that strengthen habitat
+            while offering restorative stays. Phased carefully—the land sets the pace.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -81,23 +84,23 @@ export default function AccommodationPage() {
       {/* Principles */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">Our Accommodation Principles</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">How We Practice Care</h2>
           <div className="space-y-6">
             <PrincipleCard
-              title="No Extractive Tourism"
-              description="We don't operate like a conventional retreat or high-volume accommodation business. Every stay must strengthen conservation outcomes, not compromise them."
+              title="Conservation First, Always"
+              description="Not a retreat. Not a hotel. Every stay must strengthen habitat—not compromise it. The land's needs come before guest numbers."
             />
             <PrincipleCard
-              title="Limited & Intentional"
-              description="Low guest numbers protect threatened species habitat and maintain site integrity. Scarcity ensures quality, intimacy, and genuine restoration."
+              title="Limited by Ecology, Not Scarcity Marketing"
+              description="Low guest numbers protect threatened species habitat. Intimacy and genuine restoration are outcomes of care, not brand positioning."
             />
             <PrincipleCard
-              title="Prepaid & Premium"
-              description="Premium pricing reflects true value of low-impact experiences. Prepayment ensures stable cashflow without constant marketing churn."
+              title="Value Stays in Community"
+              description="40% of profits flow to community ownership. Premium pricing reflects the true cost of conservation, not luxury positioning."
             />
             <PrincipleCard
-              title="Phased Development"
-              description="We pilot carefully, learn from each iteration, and build capacity slowly. No rush to scale—only to improve alignment with ecology and community."
+              title="Designing for Obsolescence"
+              description="We pilot carefully, learn from each season, and build toward the day this land is held by the community it serves."
             />
           </div>
         </div>
@@ -151,10 +154,10 @@ export default function AccommodationPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-stone-900 mb-6">Interested in Staying with Us?</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-6">Walk With Us</h2>
           <p className="text-lg text-stone-700 mb-8">
-            Current availability is through R&D residencies. For other accommodation options,
-            express your interest and we'll notify you as we pilot new offerings.
+            Current stays are through R&D residencies. As new seeds take root,
+            we'll share what's growing. Tell us what brings you to this land.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

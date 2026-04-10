@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'R&D Residencies | A Curious Tractor Farm',
-  description: 'Low-impact eco-residencies for focused prototyping at Black Cockatoo Valley. Immersive stays informing conservation and ethical technology platforms.',
+  description: 'R&D residencies on Jinibara Country—plant your work in conservation-first land practice at Black Cockatoo Valley. Part of A Curious Tractor.',
 };
 
 export default function ResidenciesPage() {
@@ -11,10 +11,14 @@ export default function ResidenciesPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-stone-900 via-stone-800 to-emerald-900 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">
+          <p className="text-sm uppercase tracking-widest text-stone-300 mb-4">
+            On Jinibara Country
+          </p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">R&D Residencies</h1>
           <p className="text-2xl text-stone-200 leading-relaxed">
-            Low-impact eco-residencies for focused prototyping. Immersive stays that inform platforms
-            like habitat monitoring, ethical AI tools, and regenerative practice research.
+            Plant your work in the soil of a living conservation site. Immersive stays
+            for prototyping habitat monitoring, ethical AI, and regenerative practice—where
+            every question asked strengthens the land.
           </p>
         </div>
       </section>
@@ -22,19 +26,21 @@ export default function ResidenciesPage() {
       {/* Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">Immersive Conservation R&D</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8">Curiosity Rooted in Country</h2>
           <div className="prose prose-lg max-w-none text-stone-700">
             <p className="text-xl mb-6">
-              Residencies at Black Cockatoo Valley offer deep immersion in conservation-first prototyping—stays
-              that test ideas while restoring habitat.
+              Residencies at Black Cockatoo Valley follow the LCAA method—deep listening to Country,
+              curious prototyping, tangible action, and storytelling that moves people toward care.
             </p>
             <p className="mb-6">
-              Limited availability to protect threatened species habitat. Each residency contributes to our
-              ongoing research into regenerative practices, habitat monitoring, and ethical technology development.
+              Availability is deliberately limited to protect threatened species habitat. Each residency
+              contributes to our ongoing work in regenerative practice, habitat monitoring, and ethical
+              technology—seeds that grow well beyond your stay.
             </p>
             <p>
-              150 acres of Jinibara lands with views to the Mary River, native forest, and creek systems.
-              Your work becomes part of a living laboratory for conservation innovation.
+              150 acres on Jinibara Country near Witta, with views to the Mary River, native forest,
+              and creek systems down to Elaman Creek. Your work becomes part of a living laboratory
+              building toward community co-stewardship.
             </p>
           </div>
         </div>
@@ -43,7 +49,7 @@ export default function ResidenciesPage() {
       {/* What's Included */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">What's Included</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">What the Land Offers</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <InclusionCard
               title="Eco-Accommodation"
@@ -88,7 +94,7 @@ export default function ResidenciesPage() {
       {/* Residency Types */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">Residency Types</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center">Ways to Root Your Work Here</h2>
           <div className="space-y-8">
             <ResidencyType
               title="Conservation Technology R&D"
@@ -121,23 +127,23 @@ export default function ResidenciesPage() {
       {/* Principles */}
       <section className="py-20 bg-emerald-900 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">Residency Principles</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">How We Practice Care</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <PrincipleCard
-              title="Low-Impact & Limited"
-              description="Maximum 2-3 concurrent residencies. No high-volume extractive models. Every stay protects and strengthens habitat."
+              title="The Land Comes First"
+              description="Maximum 2-3 concurrent residencies. No extractive models. Every stay protects and strengthens threatened species habitat."
             />
             <PrincipleCard
-              title="R&D Focused"
-              description="Residencies inform tangible outputs—platforms, research, practices. Not retreats, but active prototyping and learning."
+              title="Curiosity, Not Consumption"
+              description="Residencies produce tangible seeds—platforms, research, practices. Not retreats, but active prototyping guided by LCAA."
             />
             <PrincipleCard
-              title="Conservation First"
-              description="All activities align with habitat restoration and species protection. Your work contributes to measurable ecological outcomes."
+              title="Value Stays in Community"
+              description="40% of profits flow to community ownership. Your work contributes to measurable ecological outcomes and shared governance."
             />
             <PrincipleCard
-              title="Phased & Transitional"
-              description="Piloting toward community co-stewardship. Early residents help shape future governance and ownership models."
+              title="Designing for Obsolescence"
+              description="We're building toward the day this land is held by the community it serves. Early residents help shape that transition."
             />
           </div>
         </div>
@@ -146,33 +152,33 @@ export default function ResidenciesPage() {
       {/* Pricing */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">Investment</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">What It Takes</h2>
           <div className="bg-white p-10 rounded-lg shadow-sm max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <div className="text-5xl font-bold text-stone-900 mb-2">$300-$500</div>
+              <div className="text-5xl font-bold text-stone-900 mb-2">$300–$500</div>
               <div className="text-xl text-stone-600">per night</div>
             </div>
             <ul className="space-y-3 text-stone-700 mb-8">
               <li className="flex items-start">
                 <span className="text-emerald-700 font-bold mr-3">✓</span>
-                <span>Premium pricing reflects low-volume, high-impact model</span>
+                <span>Low-volume pricing that funds habitat restoration directly</span>
               </li>
               <li className="flex items-start">
                 <span className="text-emerald-700 font-bold mr-3">✓</span>
-                <span>Prepaid booking ensures commitment and stable cashflow</span>
+                <span>40% of profits flow to community ownership</span>
               </li>
               <li className="flex items-start">
                 <span className="text-emerald-700 font-bold mr-3">✓</span>
-                <span>Revenue supports habitat restoration and conservation work</span>
+                <span>Prepaid booking ensures commitment without marketing churn</span>
               </li>
               <li className="flex items-start">
                 <span className="text-emerald-700 font-bold mr-3">✓</span>
-                <span>Limited availability maintains ecological integrity</span>
+                <span>Limited availability because threatened species habitat comes first</span>
               </li>
             </ul>
             <p className="text-sm text-stone-600 text-center">
-              Discounts available for longer stays (2+ weeks) and research partnerships.
-              Scholarships considered on case-by-case basis for aligned projects.
+              Longer stays (2+ weeks) and research partnerships attract reduced rates.
+              Scholarships considered for conservation-aligned projects.
             </p>
           </div>
         </div>
@@ -181,10 +187,10 @@ export default function ResidenciesPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-stone-900 mb-6">Ready to Apply?</h2>
+          <h2 className="text-4xl font-bold text-stone-900 mb-6">Bring Your Seeds</h2>
           <p className="text-lg text-stone-700 mb-8">
-            Residencies are carefully selected to align with our conservation mission and R&D focus.
-            Tell us about your project and how it connects to our work.
+            We select residencies that deepen conservation, strengthen community, or prototype
+            tools that outlast our involvement. Tell us what you're growing and how it connects.
           </p>
           <Link
             href="/connect"
