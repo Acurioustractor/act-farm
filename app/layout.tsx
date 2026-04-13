@@ -46,10 +46,14 @@ export default function RootLayout({
           showProjects={true}
           customLinks={[
             { label: "Stay", href: "/stay" },
-            { label: "Explore the Map", href: "/map" },
             { label: "Use the Farm", href: "/use-the-farm" },
+            { label: "Residencies", href: "/residencies" },
+            { label: "Country", href: "/country" },
+            { label: "LCAA Method", href: "/lcaa" },
+            { label: "The Harvest", href: "/the-harvest" },
             { label: "Gallery", href: "/gallery" },
             { label: "Stories", href: "/stories" },
+            { label: "Explore the Map", href: "/map" },
             { label: "June's Patch", href: "/junes-patch" },
             { label: "About", href: "/about" },
             { label: "Get in Touch", href: "/connect" },
