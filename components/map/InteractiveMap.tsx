@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Location, ImageLayer } from '@/types/map';
 import { farmData } from '@/lib/map/farmData';
 import { getLocationTypeColor } from '@/lib/map/mapConstants';
 import LocationSidebar from './LocationSidebar';
 import ImageLayerSelector from './ImageLayerSelector';
 
-export default function InteractiveMap() {
+export default function InteractiveMap({ compact = false }: { compact?: boolean }) {
   const [currentLayer, setCurrentLayer] = useState<ImageLayer>('drone-current');
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
 
@@ -32,7 +33,7 @@ export default function InteractiveMap() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen">
+    <div className={`flex flex-col lg:flex-row ${compact ? 'h-[80vh]' : 'h-screen'}`}>
       {/* Map Container */}
       <div className="flex-1 relative bg-stone-900 overflow-hidden">
         {/* Layer Selector */}
@@ -44,11 +45,23 @@ export default function InteractiveMap() {
         </div>
 
         {/* Map Info */}
-        <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-xs">
-          <h3 className="font-bold text-stone-900 mb-1">{farmData.metadata.title}</h3>
-          <p className="text-sm text-stone-600">{farmData.metadata.description}</p>
-          <p className="text-xs text-stone-500 mt-2">{farmData.metadata.totalAcres} acres</p>
-        </div>
+        {!compact && (
+          <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-xs">
+            <h3 className="font-bold text-stone-900 mb-1">{farmData.metadata.title}</h3>
+            <p className="text-sm text-stone-600">{farmData.metadata.description}</p>
+            <p className="text-xs text-stone-500 mt-2">{farmData.metadata.totalAcres} acres</p>
+          </div>
+        )}
+
+        {/* Full screen link in compact mode */}
+        {compact && (
+          <Link
+            href="/map"
+            className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors"
+          >
+            Full screen →
+          </Link>
+        )}
 
         {/* Map Image with Pins */}
         <div className="relative w-full h-full flex items-center justify-center">

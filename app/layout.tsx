@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import UnifiedFooter from "@/components/shared/UnifiedFooter";
-import ChatWidget from "@/components/ChatWidget";
+import InquiryBanner from "@/components/shared/InquiryBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "A Curious Tractor Farm | Black Cockatoo Valley",
-  description: "Conservation-first residencies and regenerative practice on 150 acres of Jinibara Country. Part of the A Curious Tractor ecosystem—growing seeds of justice, art, and shared stewardship.",
+  title: "Black Cockatoo Valley | Workshops, Events & Retreats on Jinibara Country",
+  description: "150 acres of threatened species habitat available for workshops, events, weddings, retreats, and R&D residencies. On Jinibara Country, Sunshine Coast Hinterland.",
 };
 
 export default function RootLayout({
@@ -34,19 +34,19 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+        <InquiryBanner />
         <UnifiedFooter
-          currentProject="ACT Farm"
+          currentProject="Black Cockatoo Valley"
           showProjects={true}
           customLinks={[
+            { label: "Explore the Map", href: "/map" },
+            { label: "Use the Farm", href: "/use-the-farm" },
+            { label: "June's Patch", href: "/junes-patch" },
             { label: "About", href: "/about" },
-            { label: "Activities", href: "/activities" },
-            { label: "Residencies", href: "/residencies" },
-            { label: "Accommodation", href: "/accommodation" },
-            { label: "Connect", href: "/connect" },
+            { label: "Get in Touch", href: "/connect" },
           ]}
           contactEmail="hello@acurioustractor.com"
         />
-        <ChatWidget />
       </body>
     </html>
   );

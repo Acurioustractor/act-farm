@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createGHLClient } from '@/lib/ghl/client';
-import { withCache, setCached } from '@/lib/redis';
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,20 +17,10 @@ export async function POST(request: NextRequest) {
     // Initialize GHL client
     const ghlClient = createGHLClient();
 
-    // Check if contact already exists (with Redis caching)
+    // Check if contact already exists
     let existingContact;
     try {
-      existingContact = await withCache(
-        `ghl:contact:${email}`,
-        async () => {
-          try {
-            return await ghlClient.contacts.searchByEmail(email);
-          } catch (error) {
-            return null;
-          }
-        },
-        600 // 10-minute cache
-      );
+      existingContact = await ghlClient.contacts.searchByEmail(email);
     } catch (error) {
       console.log('Contact lookup failed, will create new:', error);
       existingContact = null;
@@ -72,9 +61,6 @@ export async function POST(request: NextRequest) {
         customFields,
       });
     }
-
-    // Update cache
-    await setCached(`ghl:contact:${email}`, contact, 600);
 
     // Add to appropriate pipeline based on interest
     if (process.env.GHL_ENABLE_PIPELINES === 'true' && contact?.id) {
@@ -132,12 +118,12 @@ function getTagsForInterest(interest: string): string[] {
   const baseTags = ['act-farm'];
 
   const interestTags: Record<string, string[]> = {
+    'workshop': ['interest:workshop'],
+    'event': ['interest:event', 'interest:wedding'],
+    'retreat': ['interest:retreat', 'interest:accommodation'],
     'residency': ['interest:residency', 'priority:high'],
-    'workshop': ['interest:workshop', 'interest:event'],
     'junes-patch': ['interest:junes-patch', 'healthcare', 'priority:high'],
-    'accommodation': ['interest:accommodation', 'future-guest'],
     'partnership': ['interest:partnership', 'research', 'priority:high'],
-    'collaboration': ['interest:collaboration'],
     'other': ['interest:other'],
   };
 
@@ -149,12 +135,12 @@ function getTagsForInterest(interest: string): string[] {
  */
 function getInquiryType(interest: string): string {
   const types: Record<string, string> = {
+    'workshop': 'Workshop Inquiry',
+    'event': 'Event / Wedding Inquiry',
+    'retreat': 'Retreat / Group Stay Inquiry',
     'residency': 'R&D Residency Inquiry',
-    'workshop': 'Workshop/Event Inquiry',
     'junes-patch': 'June\'s Patch Healthcare Inquiry',
-    'accommodation': 'Future Accommodation Inquiry',
     'partnership': 'Research Partnership Inquiry',
-    'collaboration': 'General Collaboration Inquiry',
     'other': 'General Inquiry',
   };
 
@@ -166,12 +152,12 @@ function getInquiryType(interest: string): string {
  */
 function getPipelineIdForInterest(interest: string): string | null {
   const interestToPipeline: Record<string, string | undefined> = {
-    'residency': process.env.GHL_RESIDENCY_PIPELINE_ID,
     'workshop': process.env.GHL_INQUIRY_PIPELINE_ID,
+    'event': process.env.GHL_INQUIRY_PIPELINE_ID,
+    'retreat': process.env.GHL_INQUIRY_PIPELINE_ID,
+    'residency': process.env.GHL_RESIDENCY_PIPELINE_ID,
     'junes-patch': process.env.GHL_JUNES_PATCH_PIPELINE_ID,
-    'accommodation': process.env.GHL_INQUIRY_PIPELINE_ID,
-    'partnership': process.env.GHL_RESIDENCY_PIPELINE_ID, // Research partnerships use residency pipeline
-    'collaboration': process.env.GHL_INQUIRY_PIPELINE_ID,
+    'partnership': process.env.GHL_RESIDENCY_PIPELINE_ID,
     'other': process.env.GHL_INQUIRY_PIPELINE_ID,
   };
 

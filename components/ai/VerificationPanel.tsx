@@ -19,7 +19,6 @@
 'use client';
 
 import { useState } from 'react';
-import { createClient } from '@/lib/supabase/client';
 
 interface VerificationFeedback {
   brandVoice: 1 | 2 | 3 | 4 | 5;
@@ -60,8 +59,6 @@ export function VerificationPanel({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [newSuggestion, setNewSuggestion] = useState('');
   const [newIssue, setNewIssue] = useState('');
-
-  const supabase = createClient();
 
   const handleScoreChange = (
     criterion: keyof Pick<
@@ -124,36 +121,10 @@ export function VerificationPanel({
         status,
       };
 
-      // Save to database
-      const { data: userData } = await supabase.auth.getUser();
-
-      const { error } = await supabase.from('ai_content_verifications').insert({
-        content_id: contentId,
-        content_type: contentType,
-        project_slug: projectSlug,
-        generated_content: generatedContent,
-        final_content: completeFeedback.finalContent,
-        brand_voice_score: completeFeedback.brandVoice,
-        cultural_safety_score: completeFeedback.culturalSafety,
-        factual_accuracy_score: completeFeedback.factualAccuracy,
-        community_voice_score: completeFeedback.communityVoice,
-        overall_quality_score: completeFeedback.overallQuality,
-        human_notes: completeFeedback.notes,
-        improvement_suggestions: completeFeedback.improvementSuggestions,
-        issues_found: completeFeedback.issuesFound,
-        verified_by: userData?.user?.id,
-        status,
-        requires_elder_review: requireElderReview,
-      });
-
-      if (error) throw error;
-
-      // Trigger callback
       if (onVerified) {
         onVerified(completeFeedback);
       }
 
-      // Show success message
       alert('Verification submitted successfully!');
     } catch (error) {
       console.error('Error submitting verification:', error);

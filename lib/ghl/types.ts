@@ -151,6 +151,18 @@ export interface GHLCalendar {
   isLivePaymentMode: boolean;
 }
 
+export interface GHLAppointment {
+  id: string;
+  contactId: string;
+  title: string;
+  calendarId: string;
+  startTime: string;
+  endTime: string;
+  status: string;
+  assignedUserId: string;
+  notes: string;
+}
+
 export interface GHLNote {
   id: string;
   body: string;
@@ -217,6 +229,19 @@ export interface GHLContact {
   website?: string;
 }
 
+export interface GHLOpportunity {
+  id: string;
+  name: string;
+  pipelineId: string;
+  pipelineStageId: string;
+  contactId: string;
+  status: string;
+  monetaryValue: number;
+  assignedTo: string;
+  source: string;
+  dateAdded: string;
+}
+
 export interface GHLWebhookEvent {
   type: 'ContactCreate' | 'ContactUpdate' | 'ContactDelete' |
         'AppointmentCreate' | 'AppointmentUpdate' | 'AppointmentDelete' |
@@ -249,10 +274,3 @@ export interface GHLFormSubmission {
     title: string;
   };
 }
-
-// Re-export from client.ts for convenience
-export type {
-  GHLContact,
-  GHLAppointment,
-  GHLOpportunity,
-} from './client';

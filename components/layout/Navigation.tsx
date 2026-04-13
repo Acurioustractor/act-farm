@@ -3,6 +3,13 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+const navLinks = [
+  { href: '/map', label: 'Explore' },
+  { href: '/use-the-farm', label: 'Use the Farm' },
+  { href: '/junes-patch', label: "June's Patch" },
+  { href: '/about', label: 'About' },
+];
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +18,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="text-2xl font-semibold text-stone-900 hover:text-stone-700 transition-colors">
-            A Curious Tractor Farm
+            Black Cockatoo Valley
           </Link>
 
           <button
@@ -36,65 +43,45 @@ export default function Navigation() {
             </svg>
           </button>
 
-          <div className="hidden md:flex space-x-8">
-            <Link href="/map" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              Map
-            </Link>
-            <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              About
-            </Link>
-            <Link href="/activities" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              Activities
-            </Link>
-            <Link href="/residencies" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              Residencies
-            </Link>
-            <Link href="/accommodation" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              Accommodation
-            </Link>
-            <Link href="/connect" className="text-stone-700 hover:text-stone-900 transition-colors font-medium">
-              Connect
-            </Link>
-            <a
-              href="https://theharvest.acurioustractor.com"
-              className="text-emerald-700 hover:text-emerald-900 transition-colors font-medium"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-stone-700 hover:text-stone-900 transition-colors font-medium"
+              >
+                {label}
+              </Link>
+            ))}
+            <Link
+              href="/connect"
+              className="bg-emerald-700 text-white px-5 py-2 rounded-full font-medium hover:bg-emerald-800 transition-colors"
             >
-              The Harvest →
-            </a>
+              Get in Touch
+            </Link>
           </div>
         </div>
 
         {isOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-3">
-              <Link href="/map" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                Map
-              </Link>
-              <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                About
-              </Link>
-              <Link href="/activities" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                Activities
-              </Link>
-              <Link href="/residencies" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                Residencies
-              </Link>
-              <Link href="/accommodation" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                Accommodation
-              </Link>
-              <Link href="/connect" className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2">
-                Connect
-              </Link>
-              <a
-                href="https://theharvest.acurioustractor.com"
-                className="text-emerald-700 hover:text-emerald-900 transition-colors font-medium py-2"
-                target="_blank"
-                rel="noopener noreferrer"
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-stone-700 hover:text-stone-900 transition-colors font-medium py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+              <Link
+                href="/connect"
+                className="bg-emerald-700 text-white px-5 py-2 rounded-full font-medium hover:bg-emerald-800 transition-colors text-center"
+                onClick={() => setIsOpen(false)}
               >
-                The Harvest →
-              </a>
+                Get in Touch
+              </Link>
             </div>
           </div>
         )}
