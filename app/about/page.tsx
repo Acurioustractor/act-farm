@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-stone-900 to-emerald-900 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">

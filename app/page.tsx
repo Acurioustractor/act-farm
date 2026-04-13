@@ -1,26 +1,14 @@
 import Link from 'next/link';
+import HomeHero from '@/components/vision/HomeHero';
 import InteractiveMap from '@/components/map/InteractiveMap';
 
 export default function Home() {
   return (
-    <div className="pt-20">
-      {/* Slim header */}
-      <section className="py-8 bg-white">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-sm uppercase tracking-widest text-stone-400 mb-2">
-            On Jinibara Country — Sunshine Coast Hinterland
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-stone-900 mb-3">
-            Black Cockatoo Valley
-          </h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            150 acres of threatened species habitat available for workshops,
-            events, retreats, and research residencies.
-          </p>
-        </div>
-      </section>
+    <div>
+      {/* Video hero — full screen, centred logo + headline */}
+      <HomeHero />
 
-      {/* Map hero */}
+      {/* Map */}
       <section>
         <InteractiveMap compact />
       </section>
@@ -73,6 +61,28 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Bottom nav links */}
+      <nav className="py-10 bg-white border-t border-stone-200">
+        <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap px-4">
+          {[
+            { href: '/map', label: 'Explore the Map' },
+            { href: '/use-the-farm', label: 'Use the Farm' },
+            { href: '/vision', label: 'Vision' },
+            { href: '/about', label: 'About' },
+            { href: '/junes-patch', label: "June's Patch" },
+            { href: '/connect', label: 'Get in Touch' },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-xs tracking-[0.15em] uppercase font-semibold text-stone-400 hover:text-stone-900 transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      </nav>
     </div>
   );
 }

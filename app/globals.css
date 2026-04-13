@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Hide footer and inquiry banner on vision page */
+body:has(.vision-page) > main ~ * {
+  display: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

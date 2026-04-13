@@ -47,8 +47,10 @@ next-env.d.ts
 .github/workflows/
 
 # Screenshots
-*.png
 Screenshot*.png
+
+# Allow logo/brand images
+!public/images/bcv-*.png
 
 # Global scripts symlink
 scripts-global
@@ -65,3 +67,4 @@ GHL_INTEGRATION_SETUP.md
 *.backup-*
 .env.local
 logs/
+.gstack/

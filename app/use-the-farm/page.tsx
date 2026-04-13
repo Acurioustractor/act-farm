@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function UseTheFarmPage() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Intro */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">

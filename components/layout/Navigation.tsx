@@ -17,8 +17,8 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="text-2xl font-semibold text-stone-900 hover:text-stone-700 transition-colors">
-            Black Cockatoo Valley
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/images/bcv-logo-dark.png" alt="Black Cockatoo Valley" className="h-10" />
           </Link>
 
           <button

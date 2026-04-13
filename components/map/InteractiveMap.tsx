@@ -3,58 +3,35 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Location, ImageLayer } from '@/types/map';
+import { Location } from '@/types/map';
 import { farmData } from '@/lib/map/farmData';
 import { getLocationTypeColor } from '@/lib/map/mapConstants';
 import LocationSidebar from './LocationSidebar';
-import ImageLayerSelector from './ImageLayerSelector';
 
 export default function InteractiveMap({ compact = false }: { compact?: boolean }) {
-  const [currentLayer, setCurrentLayer] = useState<ImageLayer>('drone-current');
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
 
   const handlePinClick = (location: Location) => {
     setSelectedLocation(location);
   };
 
-  const getImagePath = () => {
-    switch (currentLayer) {
-      case 'drone-current':
-        return '/images/map/drone-current.jpg';
-      case 'drone-before':
-        return '/images/map/drone-before.jpg';
-      case 'site-plan':
-        return '/images/map/site-plan.jpg';
-      case 'habitat-zones':
-        return '/images/map/habitat-zones.jpg';
-      default:
-        return '/images/map/drone-current.jpg';
-    }
-  };
-
   return (
     <div className={`flex flex-col lg:flex-row ${compact ? 'h-[80vh]' : 'h-screen'}`}>
       {/* Map Container */}
       <div className="flex-1 relative bg-stone-900 overflow-hidden">
-        {/* Layer Selector */}
-        <div className="absolute top-4 left-4 z-20">
-          <ImageLayerSelector
-            currentLayer={currentLayer}
-            onLayerChange={setCurrentLayer}
-          />
+        {/* Map label */}
+        <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+          <p className="text-xs font-semibold text-stone-700">Click a pin to explore</p>
         </div>
 
-        {/* Map Info */}
-        {!compact && (
+        {/* Map Info or Full screen link */}
+        {!compact ? (
           <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-xs">
             <h3 className="font-bold text-stone-900 mb-1">{farmData.metadata.title}</h3>
             <p className="text-sm text-stone-600">{farmData.metadata.description}</p>
             <p className="text-xs text-stone-500 mt-2">{farmData.metadata.totalAcres} acres</p>
           </div>
-        )}
-
-        {/* Full screen link in compact mode */}
-        {compact && (
+        ) : (
           <Link
             href="/map"
             className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors"
@@ -68,8 +45,8 @@ export default function InteractiveMap({ compact = false }: { compact?: boolean 
           <div className="relative w-full max-w-full" style={{ aspectRatio: '1920 / 1440' }}>
             {/* Drone Image */}
             <Image
-              src={getImagePath()}
-              alt={`${currentLayer} view of Black Cockatoo Valley`}
+              src="/images/map/drone-current.jpg"
+              alt="Aerial view of Black Cockatoo Valley"
               width={1920}
               height={1440}
               className="w-full h-full select-none"

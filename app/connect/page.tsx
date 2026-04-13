@@ -201,7 +201,7 @@ function ConnectForm() {
 
 export default function ConnectPage() {
   return (
-    <div className="pt-20">
+    <div>
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-12">

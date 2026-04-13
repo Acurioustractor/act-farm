@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function JunesPatchPage() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-teal-700 text-white py-24">
         <div className="max-w-4xl mx-auto px-4">
