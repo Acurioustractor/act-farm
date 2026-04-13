@@ -9,12 +9,12 @@ export default function UseTheFarmPage() {
   return (
     <div>
       {/* Intro */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
+          <h1 className="text-[clamp(3rem,7vw,5.5rem)] font-light text-site-ink mb-8 leading-[1.05]">
             Use the Farm
           </h1>
-          <p className="text-xl text-stone-600 leading-relaxed">
+          <p className="text-xl text-site-muted leading-[1.7]">
             Black Cockatoo Valley is available for workshops, events, retreats,
             and research residencies. 150 acres on Jinibara Country near Witta,
             with views to the Mary River, native forest, and creek systems down
@@ -25,15 +25,13 @@ export default function UseTheFarmPage() {
       </section>
 
       {/* Workshops */}
-      <section id="workshops" className="py-16 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-4">
+      <section id="workshops" className="py-20 md:py-28 bg-site-surface">
+        <div className="max-w-[720px] mx-auto px-4">
           <div className="mb-8">
-            <span className="text-sm uppercase tracking-widest text-emerald-700 font-medium">
-              Groups of 8–20
-            </span>
-            <h2 className="text-3xl font-bold text-stone-900 mt-2">Workshops</h2>
+            <span className="ui-label text-site-green">Groups of 8-20</span>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mt-3">Workshops</h2>
           </div>
-          <div className="prose prose-lg max-w-none text-stone-700 mb-8">
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
               Run your program in an outdoor setting surrounded by native forest.
               Dad's Lab ran a weekend workshop here — 12 people, open-air sessions
@@ -42,14 +40,14 @@ export default function UseTheFarmPage() {
             </p>
             <p>
               We provide the land, the workshop and gathering space (open-air,
-              capacity 8–20), trails, creek access, and eco-accommodation if your
+              capacity 8-20), trails, creek access, and eco-accommodation if your
               group needs to stay. You bring the program, or we help you shape one
               around the land.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
-            <h3 className="font-semibold text-stone-900 mb-3">Works well for</h3>
-            <ul className="text-stone-600 space-y-2">
+          <div className="bg-site-bg p-6 rounded-[var(--site-radius)] mb-10">
+            <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">Works well for</h3>
+            <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Facilitated workshops and offsites</li>
               <li>Team retreats and strategy sessions</li>
               <li>Creative and design sprints</li>
@@ -59,7 +57,7 @@ export default function UseTheFarmPage() {
           </div>
           <Link
             href="/connect?interest=workshop"
-            className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+            className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
           >
             Enquire about workshops
           </Link>
@@ -67,15 +65,13 @@ export default function UseTheFarmPage() {
       </section>
 
       {/* Events & Weddings */}
-      <section id="events" className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+      <section id="events" className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
           <div className="mb-8">
-            <span className="text-sm uppercase tracking-widest text-emerald-700 font-medium">
-              Up to 40 people
-            </span>
-            <h2 className="text-3xl font-bold text-stone-900 mt-2">Events & Weddings</h2>
+            <span className="ui-label text-site-green">Up to 40 people</span>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mt-3">Events & Weddings</h2>
           </div>
-          <div className="prose prose-lg max-w-none text-stone-700 mb-8">
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
               Low-key celebrations on 150 acres with views to the Mary River.
               This is rustic, not luxury — native forest, open sky, and the kind
@@ -88,9 +84,9 @@ export default function UseTheFarmPage() {
               outdoor ceremonies, campfire gatherings. The land is the venue.
             </p>
           </div>
-          <div className="bg-stone-50 p-6 rounded-lg shadow-sm mb-8">
-            <h3 className="font-semibold text-stone-900 mb-3">What's possible</h3>
-            <ul className="text-stone-600 space-y-2">
+          <div className="bg-site-surface p-6 rounded-[var(--site-radius)] mb-10">
+            <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">What's possible</h3>
+            <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Outdoor ceremonies and receptions</li>
               <li>Intimate weddings and celebrations</li>
               <li>Milestone gatherings and family reunions</li>
@@ -100,7 +96,7 @@ export default function UseTheFarmPage() {
           </div>
           <Link
             href="/connect?interest=event"
-            className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+            className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
           >
             Enquire about events
           </Link>
@@ -108,15 +104,13 @@ export default function UseTheFarmPage() {
       </section>
 
       {/* Retreats & Stays */}
-      <section id="retreats" className="py-16 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-4">
+      <section id="retreats" className="py-20 md:py-28 bg-site-surface">
+        <div className="max-w-[720px] mx-auto px-4">
           <div className="mb-8">
-            <span className="text-sm uppercase tracking-widest text-emerald-700 font-medium">
-              Small groups
-            </span>
-            <h2 className="text-3xl font-bold text-stone-900 mt-2">Retreats & Stays</h2>
+            <span className="ui-label text-site-green">Small groups</span>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mt-3">Retreats & Stays</h2>
           </div>
-          <div className="prose prose-lg max-w-none text-stone-700 mb-8">
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
               Eco-accommodation for small groups on conservation land. 150 acres
               of quiet — native forest, creek corridors, and threatened species
@@ -129,9 +123,9 @@ export default function UseTheFarmPage() {
               property including trails, Elaman Creek, and the Mary River viewpoint.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
-            <h3 className="font-semibold text-stone-900 mb-3">What to expect</h3>
-            <ul className="text-stone-600 space-y-2">
+          <div className="bg-site-bg p-6 rounded-[var(--site-radius)] mb-10">
+            <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">What to expect</h3>
+            <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Private eco-accommodation on conservation land</li>
               <li>Access to 150 acres of forest, trails, and creek systems</li>
               <li>Off-grid quiet — no traffic, no noise</li>
@@ -141,7 +135,7 @@ export default function UseTheFarmPage() {
           </div>
           <Link
             href="/connect?interest=retreat"
-            className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+            className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
           >
             Enquire about retreats
           </Link>
@@ -149,15 +143,13 @@ export default function UseTheFarmPage() {
       </section>
 
       {/* R&D Residencies */}
-      <section id="residencies" className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+      <section id="residencies" className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
           <div className="mb-8">
-            <span className="text-sm uppercase tracking-widest text-emerald-700 font-medium">
-              1–4 weeks · $300–$500/night
-            </span>
-            <h2 className="text-3xl font-bold text-stone-900 mt-2">R&D Residencies</h2>
+            <span className="ui-label text-site-green">1-4 weeks &middot; $300-$500/night</span>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mt-3">R&D Residencies</h2>
           </div>
-          <div className="prose prose-lg max-w-none text-stone-700 mb-8">
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
               Immersive stays for researchers, technologists, creatives, and
               practitioners working on conservation-aligned projects. Residencies
@@ -167,35 +159,35 @@ export default function UseTheFarmPage() {
             </p>
             <p>
               Availability is deliberately limited to protect habitat. Maximum
-              2–3 concurrent residencies. 40% of residency profits flow to
-              community ownership — because value belongs where it's grown.
+              2-3 concurrent residencies. Every residency funds conservation,
+              community programming, and the next site in the network.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
             <ResidencyType
               title="Conservation Technology"
-              duration="1–2 weeks"
+              duration="1-2 weeks"
               description="Habitat monitoring, ethical AI, sensor networks, species observation tools."
             />
             <ResidencyType
               title="Regenerative Practice"
-              duration="1–4 weeks"
+              duration="1-4 weeks"
               description="Ecosystem recovery, soil health, water systems, native species propagation."
             />
             <ResidencyType
               title="Creative Documentation"
-              duration="1–2 weeks"
+              duration="1-2 weeks"
               description="Felt stories of place and practice. Photography, writing, film, sound."
             />
             <ResidencyType
               title="Community Wellbeing"
-              duration="2–3 weeks"
+              duration="2-3 weeks"
               description="June's Patch evaluation, healthcare worker wellbeing, nature-based programs."
             />
           </div>
-          <div className="bg-stone-50 p-6 rounded-lg shadow-sm mb-8">
-            <h3 className="font-semibold text-stone-900 mb-3">What's included</h3>
-            <ul className="text-stone-600 space-y-2">
+          <div className="bg-site-surface p-6 rounded-[var(--site-radius)] mb-10">
+            <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">What's included</h3>
+            <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Eco-accommodation on conservation land</li>
               <li>Full property access — 150 acres, trails, creek systems</li>
               <li>Existing habitat data and monitoring infrastructure</li>
@@ -205,7 +197,7 @@ export default function UseTheFarmPage() {
           </div>
           <Link
             href="/connect?interest=residency"
-            className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+            className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
           >
             Apply for a residency
           </Link>
@@ -213,16 +205,16 @@ export default function UseTheFarmPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-emerald-900 text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Not sure which fits?</h2>
-          <p className="text-lg text-emerald-100 mb-8">
+      <section className="py-20 md:py-28 bg-site-ink text-white">
+        <div className="max-w-[720px] mx-auto px-4 text-center">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light mb-5">Not sure which fits?</h2>
+          <p className="text-lg text-white/60 mb-10">
             Tell us what you're thinking and we'll work it out together.
-            Every use of the farm supports conservation of threatened species habitat.
+            Every use of the farm funds conservation and builds the next residency.
           </p>
           <Link
             href="/connect"
-            className="inline-block bg-white text-emerald-900 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition-colors"
+            className="inline-block bg-white text-site-ink px-8 py-4 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:bg-site-surface transition-colors"
           >
             Get in Touch
           </Link>
@@ -234,10 +226,10 @@ export default function UseTheFarmPage() {
 
 function ResidencyType({ title, duration, description }: { title: string; duration: string; description: string }) {
   return (
-    <div className="bg-stone-50 p-5 rounded-lg">
-      <h4 className="font-semibold text-stone-900 mb-1">{title}</h4>
-      <p className="text-sm text-emerald-700 font-medium mb-2">{duration}</p>
-      <p className="text-stone-600 text-sm">{description}</p>
+    <div className="card-hover bg-site-surface p-5 rounded-[var(--site-radius)]">
+      <h4 className="font-light text-lg text-site-ink mb-1">{title}</h4>
+      <p className="ui-label text-site-green mb-2 !text-[11px]">{duration}</p>
+      <p className="text-site-muted text-[15px]">{description}</p>
     </div>
   );
 }

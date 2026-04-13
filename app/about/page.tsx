@@ -1,80 +1,107 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About | A Curious Tractor Farm',
-  description: 'Black Cockatoo Valley on Jinibara Country—conservation-first land practice guided by LCAA, building toward community co-stewardship. Part of A Curious Tractor.',
+  title: 'About | Black Cockatoo Valley',
+  description: 'Black Cockatoo Valley on Jinibara Country — a regenerative capital engine where every stay, workshop, and residency funds the next. Part of A Curious Tractor.',
 };
 
 export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-stone-900 to-emerald-900 text-white py-24">
-        <div className="max-w-4xl mx-auto px-4">
-          <p className="text-sm uppercase tracking-widest text-stone-300 mb-4">
-            On Jinibara Country
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">About Black Cockatoo Valley</h1>
-          <p className="text-2xl text-stone-200 leading-relaxed">
+      <section className="bg-site-ink text-white py-28 md:py-36">
+        <div className="max-w-[720px] mx-auto px-4">
+          <p className="ui-label text-white/50 mb-6">On Jinibara Country</p>
+          <h1 className="text-[clamp(3rem,7vw,5.5rem)] font-light leading-[1.05] mb-8">
+            About Black Cockatoo Valley
+          </h1>
+          <p className="text-[clamp(1.1rem,2vw,1.5rem)] text-white/70 leading-relaxed">
             150 acres of threatened species habitat. A living laboratory for
-            conservation, regenerative practice, and the slow work of handing over the keys.
+            conservation, regenerative practice, and creative work grounded in Country.
           </p>
         </div>
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <p className="text-sm uppercase tracking-widest text-emerald-700 mb-4 text-center">
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
+          <p className="ui-label text-site-green mb-4 text-center">
             Part of the A Curious Tractor ecosystem
           </p>
-          <h2 className="text-4xl font-bold text-stone-900 mb-8 text-center">Why This Land Matters</h2>
-          <div className="prose prose-lg max-w-none text-stone-700">
-            <p className="text-xl mb-6 text-center">
-              A Curious Tractor is a regenerative innovation ecosystem partnering with marginalised
-              communities to dismantle extractive systems. Like a tractor's power take-off, we transfer
-              resources, knowledge, and capacity to community-led initiatives—then hand over the keys.
-            </p>
-            <p className="mb-6">
-              Black Cockatoo Valley is where that work meets the soil. Not a retreat, not a farm stay,
-              not a conservation reserve. It's a place where ecology comes first, where human activity
-              strengthens rather than extracts, and where we prototype pathways toward genuine
-              community governance.
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-10 text-center">
+            Why This Land Matters
+          </h2>
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7]">
+            <p className="text-xl text-site-ink text-center">
+              A Curious Tractor is a regenerative innovation ecosystem. Like a tractor's
+              power take-off, we transfer resources, knowledge, and capacity to community-led
+              initiatives. We build technology that communities can own when we're gone.
             </p>
             <p>
-              Every residency, workshop, and gathering is a careful expression of LCAA—Listen, Curiosity,
-              Action, Art—testing what's possible when conservation, research, and regenerative practice align.
+              Black Cockatoo Valley is where that work meets the soil. It's a regenerative
+              capital engine — every stay, workshop, and residency we host funds the next one.
+              By 2030 we want to operate or partner with 10 residencies like this, each grounded
+              in its own place, each generating the capital that builds the next.
+            </p>
+            <p>
+              Jinibara Country stewardship is permanent, not transitional. First Nations cultural
+              authority over this land is non-negotiable. What we're building is the business model
+              underneath — a revenue engine that funds conservation, community programming, and
+              the next site.
             </p>
           </div>
         </div>
       </section>
 
       {/* LCAA Framework */}
-      <section className="py-20 bg-stone-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-4 text-center">The LCAA Framework</h2>
-          <p className="text-lg text-stone-700 text-center mb-12 max-w-3xl mx-auto">
-            Listen, Curiosity, Action, Art—the principles guiding all our work.
+      <section className="py-20 md:py-28 bg-site-surface">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-4 text-center">
+            The LCAA Method
+          </h2>
+          <p className="text-lg text-site-muted text-center mb-6 max-w-[720px] mx-auto">
+            Listen. Curiosity. Action. Art. Not a checklist — a loop.
+            Art returns us to Listen, and the cycle continues.
           </p>
+
+          {/* LCAA Loop Diagram */}
+          <div className="flex justify-center mb-14">
+            <div className="flex items-center gap-3 text-site-muted text-sm font-sans">
+              <span className="text-site-green font-semibold">Listen</span>
+              <span>&rarr;</span>
+              <span className="text-site-green font-semibold">Curiosity</span>
+              <span>&rarr;</span>
+              <span className="text-site-green font-semibold">Action</span>
+              <span>&rarr;</span>
+              <span className="text-site-green font-semibold">Art</span>
+              <span>&rarr;</span>
+              <span className="text-site-muted/50">back to Listen</span>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <LCAACard
               title="Listen"
-              description="Co-design with community, First Nations knowledge holders, and the land itself. We don't impose solutions—we listen first, then respond with care."
-              examples={['Partnership with Jinibara knowledge holders', 'USC research collaboration', 'Healthcare worker co-design (June\'s Patch)', 'Habitat observation and monitoring']}
+              quote="We sit in silence to take in knowledge."
+              description="Start by deeply listening to community, Country, and the land itself. Not surveying, not consulting — listening. Understanding what already exists, what's working, what hurts."
+              examples={['Partnership with Jinibara knowledge holders', 'USC research collaboration', 'Healthcare worker co-design', 'Habitat observation and monitoring']}
             />
             <LCAACard
               title="Curiosity"
-              description="R&D prototyping, asking questions, testing hypotheses. We embrace not-knowing and use it to fuel careful exploration and learning."
+              quote="We lean into the unknown with open minds and hearts."
+              description="Follow the threads that emerge from listening. Ask better questions. Explore unexpected connections. Resist premature closure. Innovation lives in the space between what is and what could be."
               examples={['Conservation technology residencies', 'Regenerative practice experiments', 'Ethical AI for habitat monitoring', 'Community wellbeing research']}
             />
             <LCAACard
               title="Action"
-              description="Tangible outputs, measurable impact, real-world application. We prototype to produce, not just philosophize."
+              quote="We are makers who play and take chances."
+              description="Move from understanding to doing. Build, prototype, test, iterate. Done with community, not to community. If we cannot hand it over, we are still in Curiosity."
               examples={['Habitat restoration activities', 'June\'s Patch food production', 'Platform development', 'Species monitoring systems']}
             />
             <LCAACard
               title="Art"
-              description="Felt stories, beauty, connection. We communicate conservation not just with data, but with experiences that move people."
+              quote="We recognise art as the first form of revolution."
+              description="Where action becomes something beautiful, meaningful, and lasting. Art is how impact is communicated, how culture is preserved, how stories change the world. Not decoration — the highest expression of the work."
               examples={['Creative documentation residencies', 'Shared meals and gatherings', 'Storytelling through place', 'Aesthetic restoration choices']}
             />
           </div>
@@ -82,123 +109,155 @@ export default function AboutPage() {
       </section>
 
       {/* The Land */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">The Country</h2>
-          <div className="prose prose-lg max-w-none text-stone-700">
-            <p className="mb-6">
-              Black Cockatoo Valley spans 150 acres on <strong>Jinibara Country</strong> near Witta, Queensland.
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-10">The Country</h2>
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7]">
+            <p>
+              Black Cockatoo Valley spans 150 acres on <strong className="text-site-ink">Jinibara Country</strong> near Witta, Queensland.
               Views stretch to the Mary River headwaters, with creeks and forest winding down to Elaman Creek.
             </p>
-            <p className="mb-6">
-              This is <strong>threatened species habitat</strong>. Our primary responsibility is protection and
-              restoration—everything else serves that purpose. The land is the teacher; we are the students.
+            <p>
+              This is <strong className="text-site-ink">threatened species habitat</strong>. Conservation-first is the
+              baseline, always. When the creek is low or the grass is tired, we slow down. Capacity is a land
+              decision before it is a calendar decision.
             </p>
-            <div className="bg-emerald-50 p-8 rounded-lg border-l-4 border-emerald-700 my-8">
-              <h3 className="text-2xl font-semibold text-stone-900 mb-4">Conservation Commitments</h3>
+            <div className="bg-site-surface p-8 rounded-[var(--site-radius)] border-l-4 border-site-green my-10">
+              <h3 className="text-2xl font-light text-site-ink mb-5">Country Sets the Pace</h3>
               <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-emerald-700 font-bold mr-3">✓</span>
-                  <span>Low-volume human activity to minimize habitat disturbance</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-700 font-bold mr-3">✓</span>
-                  <span>Ongoing weed management and native species restoration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-700 font-bold mr-3">✓</span>
-                  <span>Systematic monitoring of biodiversity and habitat health</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-700 font-bold mr-3">✓</span>
-                  <span>No extractive events, high-volume tourism, or commercial exploitation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-700 font-bold mr-3">✓</span>
-                  <span>Revenue from activities reinvested in habitat restoration</span>
-                </li>
+                {[
+                  'The land has veto power — no activities during sensitive seasons',
+                  'Low-volume operations to minimise habitat disturbance',
+                  'Ongoing weed management and native species restoration',
+                  'Wildlife corridors maintained, water systems respected',
+                  'Revenue from every stay reinvested in conservation',
+                ].map((item) => (
+                  <li key={item} className="flex items-start">
+                    <span className="text-site-green font-bold mr-3 mt-0.5">&#10003;</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
+            <blockquote className="border-l-4 border-site-clay pl-6 italic text-site-muted">
+              "If we're too busy to notice the birds, we're too busy."
+            </blockquote>
           </div>
         </div>
       </section>
 
-      {/* Business Model */}
-      <section className="py-20 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-stone-900 mb-8">How the Harvest Sustains the Soil</h2>
-          <div className="prose prose-lg max-w-none text-stone-700">
-            <p className="mb-6">
-              We operate on a <strong>low-volume, conservation-first model</strong> that generates stable revenue
-              without extracting from the land or community. 40% of profits flow to community ownership—because
-              value belongs where it's grown.
+      {/* The Farm Metaphor */}
+      <section className="py-20 md:py-28 bg-site-surface">
+        <div className="max-w-[720px] mx-auto px-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-10">
+            The Farm Metaphor
+          </h2>
+          <p className="text-site-muted text-lg leading-[1.7] mb-10">
+            The farm metaphor is not branding. It shapes daily operations and enterprise choices.
+            The system is the tractor, the humans are the farmers, the community is the harvest.
+          </p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { element: 'Soil', meaning: 'The knowledge network, community wisdom' },
+              { element: 'Seeds', meaning: 'Projects, ideas, initiatives' },
+              { element: 'Tending', meaning: 'Ongoing care and attention' },
+              { element: 'Harvest', meaning: 'Impact, results, value returned' },
+              { element: 'Compost', meaning: 'Learning from failure' },
+              { element: 'Seasons', meaning: 'Natural rhythms and timing' },
+            ].map((item) => (
+              <div key={item.element} className="bg-site-bg p-5 rounded-[var(--site-radius)]">
+                <h4 className="text-lg font-light text-site-ink mb-1">{item.element}</h4>
+                <p className="text-site-muted text-sm">{item.meaning}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Regenerative Capital Engine */}
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-10">
+            How the Engine Works
+          </h2>
+          <div className="space-y-6 text-site-muted text-lg leading-[1.7]">
+            <p>
+              Every dollar ACT Farm generates builds more residencies, more accommodation,
+              more places for artists, researchers, and communities to do transformative work.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold text-stone-900 mb-3">Revenue Streams</h3>
-                <ul className="space-y-2 text-stone-700">
-                  <li>• R&D residencies ($300-$500/night)</li>
-                  <li>• Workshops and events ($5K+ limited groups)</li>
-                  <li>• June's Patch subscriptions ($400-$800/season)</li>
-                  <li>• Research partnerships and grants</li>
-                  <li>• Regenerative offset credits (future)</li>
+            <div className="grid md:grid-cols-2 gap-6 my-10">
+              <div className="bg-site-surface p-6 rounded-[var(--site-radius)]">
+                <h3 className="text-xl font-light text-site-ink mb-4">Revenue Streams</h3>
+                <ul className="space-y-2 text-site-muted text-[15px]">
+                  <li>Philanthropy-sponsored residencies</li>
+                  <li>Corporate innovation retreats</li>
+                  <li>Innovation workshops</li>
+                  <li>Eco-stays (Pink Cabin, Train Carriage)</li>
+                  <li>June's Patch healthcare wellness</li>
+                  <li>The Harvest CSA and dining events</li>
                 </ul>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold text-stone-900 mb-3">Cost Reduction</h3>
-                <ul className="space-y-2 text-stone-700">
-                  <li>• Community-led activities (volunteers)</li>
-                  <li>• Low-volume reduces overhead</li>
-                  <li>• Prepaid model ensures cashflow</li>
-                  <li>• Phased development limits risk</li>
-                  <li>• Aligned partnerships share costs</li>
+              <div className="bg-site-surface p-6 rounded-[var(--site-radius)]">
+                <h3 className="text-xl font-light text-site-ink mb-4">Where It Goes</h3>
+                <ul className="space-y-2 text-site-muted text-[15px]">
+                  <li>Conservation and habitat restoration</li>
+                  <li>Community programming and therapeutic horticulture</li>
+                  <li>New accommodation and studio infrastructure</li>
+                  <li>First Nations heritage and cultural work</li>
+                  <li>The next site in the network</li>
                 </ul>
               </div>
             </div>
             <p>
-              This model proves that protecting habitat can be economically sustainable—without
-              extractive growth, luxury positioning, or glossy marketing. We separate profit from purpose by keeping them aligned.
+              The vision is a portfolio: 3-5 sites by 2030, each grounded in its own place,
+              co-governed with Traditional Owners, and generating the capital that builds the next.
+              ACT brings operations, brand, and booking infrastructure. Partners bring land and
+              local relationships. Revenue share, not purchase.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Future Vision */}
-      <section className="py-20 bg-emerald-900 text-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6 text-center">Beautiful Obsolescence</h2>
-          <p className="text-xl text-emerald-100 text-center mb-8 leading-relaxed">
-            Our long-term vision is transition to community co-stewardship and governance.
-            We build toward the day when Black Cockatoo Valley is held and managed by the community it serves.
-          </p>
-          <div className="bg-emerald-800/50 backdrop-blur-sm p-8 rounded-lg">
-            <p className="text-emerald-100 leading-relaxed">
-              This is what we call "beautiful obsolescence"—creating systems, knowledge, and capacity
-              that outlive our individual involvement. Every residency, workshop, and partnership is a step
-              toward eventual local ownership. We're building a pathway, not an empire.
+      {/* Origin Story */}
+      <section className="py-20 md:py-28 bg-site-ink text-white">
+        <div className="max-w-[720px] mx-auto px-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light mb-8 text-center">The Tractor</h2>
+          <div className="space-y-6 text-white/60 text-lg leading-[1.7]">
+            <p>
+              A Curious Tractor began with a simple observation: most technology extracts
+              value from communities. Data flows out, insights flow out, decisions are made elsewhere.
+            </p>
+            <p>
+              The tractor metaphor came from agricultural machinery: a tractor's Power Take-Off
+              transfers engine power to implements. The tractor doesn't do the work itself — it
+              enables other tools to work. And crucially, implements can be unhitched, repaired
+              locally, and used without the tractor.
+            </p>
+            <p className="text-white/80 text-xl">
+              The question isn't "what can we build?" but "what can communities own when we're gone?"
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-stone-900 mb-6">Walk With Us</h2>
-          <p className="text-lg text-stone-700 mb-8">
-            Explore the seeds we're growing—residencies, workshops, and ways to
-            steward this land alongside us.
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[720px] mx-auto px-4 text-center">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-6">Walk With Us</h2>
+          <p className="text-lg text-site-muted mb-10">
+            Stay at the valley, use the farm for your program, or explore how your
+            work connects to what we're building here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/activities"
-              className="inline-block bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+              href="/stay"
+              className="inline-block bg-site-green text-white px-8 py-4 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
             >
-              View Activities
+              Stay at the Valley
             </Link>
             <Link
               href="/connect"
-              className="inline-block border-2 border-stone-900 text-stone-900 px-8 py-4 rounded-full font-semibold hover:bg-stone-50 transition-colors"
+              className="inline-block border border-site-ink text-site-ink px-8 py-4 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:bg-site-surface transition-colors"
             >
               Get in Touch
             </Link>
@@ -211,21 +270,23 @@ export default function AboutPage() {
 
 interface LCAACardProps {
   title: string;
+  quote: string;
   description: string;
   examples: string[];
 }
 
-function LCAACard({ title, description, examples }: LCAACardProps) {
+function LCAACard({ title, quote, description, examples }: LCAACardProps) {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-sm">
-      <h3 className="text-3xl font-bold text-emerald-700 mb-4">{title}</h3>
-      <p className="text-stone-700 mb-6 leading-relaxed">{description}</p>
+    <div className="card-hover bg-site-bg p-8 rounded-[var(--site-radius)]">
+      <h3 className="text-3xl font-light text-site-green mb-2">{title}</h3>
+      <p className="text-sm italic text-site-clay mb-4">{quote}</p>
+      <p className="text-site-muted mb-6 leading-relaxed">{description}</p>
       <div>
-        <h4 className="text-sm font-semibold text-stone-900 mb-3 uppercase tracking-wide">Examples</h4>
+        <h4 className="ui-label text-site-ink mb-3">At the Farm</h4>
         <ul className="space-y-2">
           {examples.map((example, index) => (
-            <li key={index} className="flex items-start text-stone-600 text-sm">
-              <span className="text-emerald-700 mr-2">→</span>
+            <li key={index} className="flex items-start text-site-muted text-[15px]">
+              <span className="text-site-clay mr-2">&rarr;</span>
               <span>{example}</span>
             </li>
           ))}
