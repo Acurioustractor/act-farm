@@ -48,6 +48,8 @@ export default function RootLayout({
             { label: "Stay", href: "/stay" },
             { label: "Explore the Map", href: "/map" },
             { label: "Use the Farm", href: "/use-the-farm" },
+            { label: "Gallery", href: "/gallery" },
+            { label: "Stories", href: "/stories" },
             { label: "June's Patch", href: "/junes-patch" },
             { label: "About", href: "/about" },
             { label: "Get in Touch", href: "/connect" },

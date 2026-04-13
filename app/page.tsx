@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import HomeHero from '@/components/vision/HomeHero';
 import InteractiveMap from '@/components/map/InteractiveMap';
+import StoriesStrip from '@/components/sections/StoriesStrip';
 
 export default function Home() {
   return (
@@ -45,6 +46,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stories strip — EL syndicated content, renders nothing if empty */}
+      <StoriesStrip />
+
       {/* Contact CTA */}
       <section className="py-20 md:py-28 bg-site-surface">
         <div className="max-w-[720px] mx-auto px-4 text-center">
@@ -70,6 +74,8 @@ export default function Home() {
             { href: '/stay', label: 'Stay' },
             { href: '/map', label: 'Explore the Map' },
             { href: '/use-the-farm', label: 'Use the Farm' },
+            { href: '/gallery', label: 'Gallery' },
+            { href: '/stories', label: 'Stories' },
             { href: '/vision', label: 'Vision' },
             { href: '/about', label: 'About' },
             { href: '/junes-patch', label: "June's Patch" },
