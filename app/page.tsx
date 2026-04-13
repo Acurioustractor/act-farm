@@ -14,15 +14,16 @@ export default function Home() {
       </section>
 
       {/* Use case cards */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-stone-900 mb-10 text-center">
+      <section className="py-20 md:py-28 bg-site-bg">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <p className="ui-label text-site-muted text-center mb-4">What you can do here</p>
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-14 text-center">
             Use the Farm
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <UseCaseCard
               title="Workshops"
-              description="Run your program in an outdoor setting with creek walks, native forest, and space to think. Groups of 8–20."
+              description="Run your program in an outdoor setting with creek walks, native forest, and space to think. Groups of 8-20."
               href="/use-the-farm#workshops"
             />
             <UseCaseCard
@@ -37,7 +38,7 @@ export default function Home() {
             />
             <UseCaseCard
               title="R&D Residencies"
-              description="1–4 week stays for conservation technology, regenerative practice, creative documentation, or wellbeing research."
+              description="1-4 week stays for conservation technology, regenerative practice, creative documentation, or wellbeing research."
               href="/use-the-farm#residencies"
             />
           </div>
@@ -45,17 +46,17 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-stone-900 mb-4">
+      <section className="py-20 md:py-28 bg-site-surface">
+        <div className="max-w-[720px] mx-auto px-4 text-center">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-5">
             Want to use the farm?
           </h2>
-          <p className="text-lg text-stone-600 mb-8">
+          <p className="text-lg text-site-muted mb-10">
             Tell us what you're planning. We'll get back to you within a few days.
           </p>
           <Link
             href="/connect"
-            className="inline-block bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-800 transition-colors"
+            className="inline-block bg-site-green text-white px-8 py-4 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
           >
             Get in Touch
           </Link>
@@ -63,9 +64,10 @@ export default function Home() {
       </section>
 
       {/* Bottom nav links */}
-      <nav className="py-10 bg-white border-t border-stone-200">
+      <nav className="py-10 bg-site-bg border-t border-site-line">
         <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap px-4">
           {[
+            { href: '/stay', label: 'Stay' },
             { href: '/map', label: 'Explore the Map' },
             { href: '/use-the-farm', label: 'Use the Farm' },
             { href: '/vision', label: 'Vision' },
@@ -76,7 +78,7 @@ export default function Home() {
             <Link
               key={href}
               href={href}
-              className="text-xs tracking-[0.15em] uppercase font-semibold text-stone-400 hover:text-stone-900 transition-colors"
+              className="ui-label text-site-muted hover:text-site-ink transition-colors"
             >
               {label}
             </Link>
@@ -89,13 +91,13 @@ export default function Home() {
 
 function UseCaseCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
-    <Link href={href} className="block bg-stone-50 p-6 rounded-lg hover:bg-stone-100 transition-colors group">
-      <h3 className="text-xl font-semibold text-stone-900 mb-3 group-hover:text-emerald-700 transition-colors">
+    <Link href={href} className="card-hover block bg-site-surface p-6 rounded-[var(--site-radius)] group">
+      <h3 className="text-[24px] font-light text-site-ink mb-3 group-hover:text-site-green transition-colors">
         {title}
       </h3>
-      <p className="text-stone-600 leading-relaxed text-sm">{description}</p>
-      <span className="inline-block mt-4 text-emerald-700 font-medium text-sm">
-        Learn more →
+      <p className="text-site-muted leading-relaxed text-[15px]">{description}</p>
+      <span className="inline-block mt-4 text-site-green font-medium text-sm font-sans">
+        Learn more &rarr;
       </span>
     </Link>
   );

@@ -38,7 +38,7 @@ export default function HomeHero() {
         className="relative z-10 text-center px-6 max-w-4xl mx-auto"
         style={{ opacity, transform: `translateY(${scrollY * 0.15}px)` }}
       >
-        <p className="mb-8 text-[10px] font-semibold uppercase tracking-[0.5em] text-white/60">
+        <p className="ui-label mb-8 !text-[10px] !tracking-[0.5em] text-white/50">
           On Jinibara Country &middot; Sunshine Coast Hinterland
         </p>
 
@@ -48,7 +48,7 @@ export default function HomeHero() {
           className="mx-auto mb-10 w-full max-w-md md:max-w-lg"
         />
 
-        <h1 className="text-[clamp(1.3rem,3.5vw,2.2rem)] font-light leading-[1.3] text-white/80 max-w-2xl mx-auto mb-10">
+        <h1 className="text-[clamp(1.3rem,3.5vw,2.2rem)] font-light leading-[1.3] text-white/70 max-w-2xl mx-auto mb-10" style={{ fontFamily: 'var(--font-body), Georgia, serif' }}>
           150 acres of threatened species habitat available for workshops,
           events, retreats, and research residencies.
         </h1>
@@ -56,13 +56,13 @@ export default function HomeHero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/use-the-farm"
-            className="px-8 py-3 bg-white text-stone-900 rounded-full font-semibold hover:bg-emerald-400 transition-all duration-500 text-sm tracking-wide"
+            className="px-8 py-3 bg-white text-site-ink rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:bg-site-surface transition-all duration-500"
           >
             Use the Farm
           </Link>
           <Link
             href="/vision"
-            className="px-8 py-3 border border-white/30 text-white rounded-full font-semibold hover:border-white/60 transition-all duration-500 text-sm tracking-wide"
+            className="px-8 py-3 border border-white/30 text-white rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:border-white/60 transition-all duration-500"
           >
             See the Vision
           </Link>
