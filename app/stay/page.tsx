@@ -1,34 +1,10 @@
 import Link from 'next/link';
+import { accommodations, type Accommodation } from '@/lib/stay/accommodations';
 
 export const metadata = {
   title: 'Stay | Black Cockatoo Valley',
   description: 'Unique eco-accommodation on 150 acres of Jinibara Country. The Pink Cabin and Train Carriage Lookout — outdoor baths, valley views, off-grid quiet.',
 };
-
-const accommodations = [
-  {
-    id: 'pink-cabin',
-    name: 'The Pink Cabin',
-    subtitle: 'Tuscan Cabin',
-    guests: '2 guests',
-    features: ['Queen bed', 'Kitchenette', 'Outdoor bathtub', 'Fire pit', 'Valley views', 'Pet-friendly'],
-    description:
-      'A cosy Tuscan-inspired cabin with panoramic valley views and cattle grazing out front. Wake with the sunrise from bed, watch the sunset from the outdoor bath with a glass of wine. The kitchenette has a cooktop and fridge. Private fire pit for evenings under the stars.',
-    highlight: 'Most loved — guests call it "a peaceful oasis to rejuvenate"',
-    images: ['/images/stay/pink-cabin-1.jpg', '/images/stay/pink-cabin-2.jpg', '/images/stay/pink-cabin-3.jpg', '/images/stay/pink-cabin-4.jpg', '/images/stay/pink-cabin-5.jpg'],
-  },
-  {
-    id: 'train-carriage',
-    name: 'Train Carriage Lookout',
-    subtitle: 'Converted Railway Carriage',
-    guests: '2 guests',
-    features: ['Double bed', 'Outdoor shower', 'Bathtub', 'Valley lookout', 'Composting toilet', 'Pet-friendly'],
-    description:
-      'A converted railway carriage perched on the ridge with views across the valley. Simple, warm, and unlike anything else. Outdoor shower, bathtub, and the communal pizza oven is a short walk away. Disconnect completely — there\'s no phone reception up here.',
-    highlight: 'Named "glamping with a twist" — guests love the views and the quiet',
-    images: ['/images/stay/train-carriage-1.jpg', '/images/stay/train-carriage-2.jpg', '/images/stay/train-carriage-3.jpg', '/images/stay/train-carriage-4.jpg', '/images/stay/train-carriage-5.jpg'],
-  },
-];
 
 const reviews = [
   {
@@ -107,8 +83,8 @@ export default function StayPage() {
               <p className="text-site-muted">Pick a cabin, carriage, or tent that fits your vibe</p>
             </div>
             <div>
-              <p className="ui-label text-site-green mb-2">2. Book</p>
-              <p className="text-site-muted">Message us with your dates and we'll confirm availability</p>
+              <p className="ui-label text-site-green mb-2">2. Request</p>
+              <p className="text-site-muted">Pick dates, send a request — Nic confirms personally, usually within a day</p>
             </div>
             <div>
               <p className="ui-label text-site-green mb-2">3. Arrive</p>
@@ -223,19 +199,23 @@ export default function StayPage() {
       <section className="py-20 md:py-28 bg-site-ink text-white">
         <div className="max-w-[720px] mx-auto px-4 text-center">
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light mb-6">
-            Book Your Stay
+            Book Direct
           </h2>
           <p className="text-xl text-white/60 mb-10 leading-relaxed">
-            We're transitioning to direct bookings with a human touch.
-            Tell us which accommodation interests you, your dates, and how many guests.
-            Nic will get back to you personally.
+            No middleman, no booking fees. Pick a cabin below, choose your dates,
+            send us a request. Nic confirms personally.
           </p>
-          <Link
-            href="/connect?interest=retreat"
-            className="inline-block bg-site-green text-white px-8 py-4 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
-          >
-            Enquire About a Stay
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {accommodations.map((acc) => (
+              <Link
+                key={acc.id}
+                href={`/stay/${acc.id}`}
+                className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
+              >
+                Book {acc.name}
+              </Link>
+            ))}
+          </div>
           <p className="text-white/30 text-sm mt-6">
             Previously on Hipcamp &middot; Now booking direct
           </p>
@@ -246,7 +226,7 @@ export default function StayPage() {
 }
 
 interface AccommodationProps {
-  accommodation: typeof accommodations[number];
+  accommodation: Accommodation;
   reverse: boolean;
 }
 
@@ -255,13 +235,15 @@ function AccommodationCard({ accommodation, reverse }: AccommodationProps) {
     <div id={accommodation.id} className={`grid md:grid-cols-2 gap-10 items-center ${reverse ? 'md:[direction:rtl]' : ''}`}>
       {/* Image gallery */}
       <div className={`${reverse ? 'md:[direction:ltr]' : ''}`}>
-        <div className="aspect-[4/3] rounded-[var(--site-radius)] overflow-hidden mb-2">
-          <img
-            src={accommodation.images[0]}
-            alt={accommodation.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <Link href={`/stay/${accommodation.id}`} className="block">
+          <div className="aspect-[4/3] rounded-[var(--site-radius)] overflow-hidden mb-2 card-hover">
+            <img
+              src={accommodation.images[0]}
+              alt={accommodation.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </Link>
         <div className="grid grid-cols-4 gap-2">
           {accommodation.images.slice(1, 5).map((img, i) => (
             <div key={i} className="aspect-square rounded-[var(--site-radius)] overflow-hidden">
@@ -283,7 +265,7 @@ function AccommodationCard({ accommodation, reverse }: AccommodationProps) {
         <p className="text-sm text-site-green italic mb-6">
           {accommodation.highlight}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-7">
           {accommodation.features.map((feature) => (
             <span
               key={feature}
@@ -293,6 +275,12 @@ function AccommodationCard({ accommodation, reverse }: AccommodationProps) {
             </span>
           ))}
         </div>
+        <Link
+          href={`/stay/${accommodation.id}`}
+          className="inline-block bg-site-green text-white px-6 py-3 rounded-[var(--site-radius)] font-sans text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
+        >
+          View details &amp; book — from ${accommodation.nightlyRateAud}/night
+        </Link>
       </div>
     </div>
   );
