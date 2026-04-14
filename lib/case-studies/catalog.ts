@@ -32,6 +32,17 @@ export const caseStudies: CaseStudy[] = [
     status: 'published',
   },
   {
+    slug: 'dad-lab-bcv-2025',
+    title: 'DAD.LAB \u2014 the inaugural cohort at BCV, 2025',
+    summary:
+      'Twenty dads. One weekend at Black Cockatoo Valley. A silent walk, a pile of soil, a pizza oven, and a framework small enough to carry home \u2014 I have, I am, I can. This is the case study of what happens when you take fatherhood out of the living room and put it on Country.',
+    wikiPath: 'wiki/projects/act-farm/case-studies/dad-lab-bcv-2025.md',
+    period: '2025 (inaugural cohort)',
+    experienceSlugs: ['dad-lab-at-bcv'],
+    themes: ['health', 'wellbeing', 'country'],
+    status: 'published',
+  },
+  {
     slug: 'community-capital-bowral-2025',
     title: 'Community Capital \u2014 Bowral, 23\u201325 Feb 2025',
     summary:

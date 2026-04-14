@@ -175,6 +175,7 @@ export const experiences: Experience[] = [
       preferredMonths: true,
       groupSize: true,
     },
+    caseStudySlugs: ['dad-lab-bcv-2025'],
   },
 
   // -------------------------------------------------------------------- makers
