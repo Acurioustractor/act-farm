@@ -46,6 +46,7 @@ export const experiences: Experience[] = [
       residencyType: true,
     },
     pricing: 'Tiered: funded, supported, and self-funded placements. Negotiated per artist.',
+    caseStudySlugs: ['radical-scoops-at-the-harvest'],
   },
   {
     slug: 'empathy-ledger-storytelling-residency',
@@ -209,6 +210,7 @@ export const experiences: Experience[] = [
       groupSize: true,
       topic: true,
     },
+    caseStudySlugs: ['radical-scoops-at-the-harvest'],
   },
 ];
 
