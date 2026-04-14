@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
       'A 2,000-square-metre former nursery in Witta, a 12-month lease, about a thousand milk crates, an elder with a saw blade and a story about red cedar, an oyster farmer from up the coast, and ice cream as the connective tissue. Radical Scoops is ACT\u2019s first large-scale industry residency \u2014 the case study for what an arts-and-industry fellowship looks like when you run it the way we\u2019d build it ourselves.',
     wikiPath: 'wiki/projects/act-farm/case-studies/radical-scoops-at-the-harvest.md',
     period: '2025\u20132026 active; Capacity Lab phase Jul 2026 \u2013 Jun 2027',
-    experienceSlugs: ['harvest-pairings', 'artist-residency'],
+    experienceSlugs: ['industry-residency-at-the-harvest', 'harvest-pairings', 'artist-residency'],
     themes: ['art', 'regenerative-practice', 'storytelling', 'making', 'country'],
     status: 'published',
   },

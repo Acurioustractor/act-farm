@@ -49,6 +49,24 @@ export const experiences: Experience[] = [
     caseStudySlugs: ['radical-scoops-at-the-harvest'],
   },
   {
+    slug: 'industry-residency-at-the-harvest',
+    category: 'residencies',
+    title: 'Industry Residency at The Harvest',
+    summary:
+      'We host industry residencies at The Harvest \u2014 extended placements where artists, designers and ACT work alongside a regional industry and its people. Not an artist-in-residence at a company. A community treating its own industry, land and elders as the material, with us holding the studio.',
+    wikiPath: 'wiki/projects/act-farm/experiences/industry-residency-at-the-harvest.md',
+    status: 'active',
+    themes: ['art', 'regenerative-practice', 'storytelling', 'making', 'country'],
+    inquiryShape: {
+      preferredMonths: true,
+      duration: true,
+      organisation: true,
+      topic: true,
+    },
+    pricing: 'Grant-funded and co-designed per residency (RAA, ANAT, state arts bodies, philanthropic partners). No rack rate \u2014 we help shape the funding case.',
+    caseStudySlugs: ['radical-scoops-at-the-harvest'],
+  },
+  {
     slug: 'empathy-ledger-storytelling-residency',
     category: 'residencies',
     title: 'Empathy Ledger Storytelling Residency',
