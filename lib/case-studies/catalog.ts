@@ -7,8 +7,45 @@ import type { CaseStudy } from '@/lib/experiences/types';
  * Case studies are evidence. They link back to the experience(s) they
  * demonstrate so `/experiences/<slug>` can render "Related case studies"
  * automatically.
+ *
+ * Ordering convention: newest at the top of the array. `CaseStudyStrip`
+ * on the homepage renders `caseStudies.slice(0, 3)` as "the 3 latest",
+ * so whatever you put first is what ships to the homepage.
  */
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: 'junes-patch-year-one-2025',
+    title: 'June\u2019s Patch Year One \u2014 the JCF partnership, 2024\u20132025',
+    summary:
+      'A multi-year partnership between ACT and the June Canavan Foundation, named for Dr June Canavan\u2019s belief in the health\u2013nature intersection. Year One was supposed to be about nature prescriptions for healthcare workers. What it actually became was a hybrid community that runs as much online as on the land, and that is now pivoting into food production as the next form of therapy.',
+    wikiPath: 'wiki/projects/act-farm/case-studies/junes-patch-year-one-2025.md',
+    period: 'Oct 2024 \u2013 Sep 2025 (Year One of 3)',
+    experienceSlugs: ['junes-patch-healthcare-retreat'],
+    themes: ['health', 'wellbeing', 'country', 'regenerative-practice'],
+    status: 'published',
+  },
+  {
+    slug: 'radical-scoops-at-the-harvest',
+    title: 'Radical Scoops at The Harvest \u2014 the RAA Industry Residency',
+    summary:
+      'A 2,000-square-metre former nursery in Witta, a 12-month lease, about a thousand milk crates, an elder with a saw blade and a story about red cedar, an oyster farmer from up the coast, and ice cream as the connective tissue. Radical Scoops is ACT\u2019s first large-scale industry residency \u2014 the case study for what an arts-and-industry fellowship looks like when you run it the way we\u2019d build it ourselves.',
+    wikiPath: 'wiki/projects/act-farm/case-studies/radical-scoops-at-the-harvest.md',
+    period: '2025\u20132026 active; Capacity Lab phase Jul 2026 \u2013 Jun 2027',
+    experienceSlugs: ['industry-residency-at-the-harvest', 'harvest-pairings', 'artist-residency'],
+    themes: ['art', 'regenerative-practice', 'storytelling', 'making', 'country'],
+    status: 'published',
+  },
+  {
+    slug: 'dad-lab-bcv-2025',
+    title: 'DAD.LAB \u2014 the inaugural cohort at BCV, 2025',
+    summary:
+      'Twenty dads. One weekend at Black Cockatoo Valley. A silent walk, a pile of soil, a pizza oven, and a framework small enough to carry home \u2014 I have, I am, I can. This is the case study of what happens when you take fatherhood out of the living room and put it on Country.',
+    wikiPath: 'wiki/projects/act-farm/case-studies/dad-lab-bcv-2025.md',
+    period: '2025 (inaugural cohort)',
+    experienceSlugs: ['dad-lab-at-bcv'],
+    themes: ['health', 'wellbeing', 'country'],
+    status: 'published',
+  },
   {
     slug: 'community-capital-at-bcv',
     title: 'Community Capital at BCV \u2014 a year in the valley',
@@ -29,39 +66,6 @@ export const caseStudies: CaseStudy[] = [
     period: '2025\u2013present',
     experienceSlugs: ['the-space-at-bcv'],
     themes: ['art', 'community-capital', 'country'],
-    status: 'published',
-  },
-  {
-    slug: 'radical-scoops-at-the-harvest',
-    title: 'Radical Scoops at The Harvest \u2014 the RAA Industry Residency',
-    summary:
-      'A 2,000-square-metre former nursery in Witta, a 12-month lease, about a thousand milk crates, an elder with a saw blade and a story about red cedar, an oyster farmer from up the coast, and ice cream as the connective tissue. Radical Scoops is ACT\u2019s first large-scale industry residency \u2014 the case study for what an arts-and-industry fellowship looks like when you run it the way we\u2019d build it ourselves.',
-    wikiPath: 'wiki/projects/act-farm/case-studies/radical-scoops-at-the-harvest.md',
-    period: '2025\u20132026 active; Capacity Lab phase Jul 2026 \u2013 Jun 2027',
-    experienceSlugs: ['industry-residency-at-the-harvest', 'harvest-pairings', 'artist-residency'],
-    themes: ['art', 'regenerative-practice', 'storytelling', 'making', 'country'],
-    status: 'published',
-  },
-  {
-    slug: 'junes-patch-year-one-2025',
-    title: 'June\u2019s Patch Year One \u2014 the JCF partnership, 2024\u20132025',
-    summary:
-      'A multi-year partnership between ACT and the June Canavan Foundation, named for Dr June Canavan\u2019s belief in the health\u2013nature intersection. Year One was supposed to be about nature prescriptions for healthcare workers. What it actually became was a hybrid community that runs as much online as on the land, and that is now pivoting into food production as the next form of therapy.',
-    wikiPath: 'wiki/projects/act-farm/case-studies/junes-patch-year-one-2025.md',
-    period: 'Oct 2024 \u2013 Sep 2025 (Year One of 3)',
-    experienceSlugs: ['junes-patch-healthcare-retreat'],
-    themes: ['health', 'wellbeing', 'country', 'regenerative-practice'],
-    status: 'published',
-  },
-  {
-    slug: 'dad-lab-bcv-2025',
-    title: 'DAD.LAB \u2014 the inaugural cohort at BCV, 2025',
-    summary:
-      'Twenty dads. One weekend at Black Cockatoo Valley. A silent walk, a pile of soil, a pizza oven, and a framework small enough to carry home \u2014 I have, I am, I can. This is the case study of what happens when you take fatherhood out of the living room and put it on Country.',
-    wikiPath: 'wiki/projects/act-farm/case-studies/dad-lab-bcv-2025.md',
-    period: '2025 (inaugural cohort)',
-    experienceSlugs: ['dad-lab-at-bcv'],
-    themes: ['health', 'wellbeing', 'country'],
     status: 'published',
   },
   {

@@ -10,6 +10,7 @@ import { caseStudiesForExperience } from '@/lib/case-studies/catalog';
 import InquiryForm from '@/components/experiences/InquiryForm';
 import CaseStudyCard from '@/components/experiences/CaseStudyCard';
 import ThemeBadge from '@/components/experiences/ThemeBadge';
+import FirstCaseStudyInvite from '@/components/experiences/FirstCaseStudyInvite';
 
 type Params = { slug: string };
 
@@ -76,7 +77,7 @@ export default async function ExperienceDetailPage({
       </section>
 
       {/* Price + inquiry */}
-      <section className="bg-site-surface py-16 md:py-20">
+      <section id="inquire" className="bg-site-surface py-16 md:py-20 scroll-mt-20">
         <div className="max-w-[960px] mx-auto px-4 grid md:grid-cols-5 gap-10 md:gap-14 items-start">
           <div className="md:col-span-3 space-y-6">
             <div>
@@ -98,17 +99,9 @@ export default async function ExperienceDetailPage({
               </div>
             ) : null}
 
-            <div>
-              <p className="ui-label text-site-muted mb-3">Source of truth</p>
-              <p className="text-site-muted leading-relaxed">
-                The canonical description of this experience lives in the ACT
-                wiki at{' '}
-                <code className="text-sm text-site-ink bg-site-bg px-2 py-0.5 rounded">
-                  {exp.wikiPath}
-                </code>
-                . When the offer changes, the wiki changes first.
-              </p>
-            </div>
+            <p className="text-sm text-site-muted leading-relaxed font-sans">
+              Canonical source: <code className="text-[12px] text-site-ink/80 break-all">{exp.wikiPath}</code>
+            </p>
           </div>
 
           <div className="md:col-span-2">
@@ -116,6 +109,14 @@ export default async function ExperienceDetailPage({
           </div>
         </div>
       </section>
+
+      {/* Open invitation — recruiting the first placement/cohort */}
+      {exp.inviteFirst ? (
+        <FirstCaseStudyInvite
+          label={exp.inviteFirst.label}
+          body={exp.inviteFirst.body}
+        />
+      ) : null}
 
       {/* Related case studies */}
       {relatedCases.length > 0 ? (

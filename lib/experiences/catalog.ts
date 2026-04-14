@@ -47,6 +47,10 @@ export const experiences: Experience[] = [
     },
     pricing: 'Tiered: funded, supported, and self-funded placements. Negotiated per artist.',
     caseStudySlugs: ['radical-scoops-at-the-harvest'],
+    inviteFirst: {
+      label: 'Be our first placed artist at BCV',
+      body: 'No artist has been placed at Black Cockatoo Valley yet. We\u2019re looking for our inaugural residency \u2014 someone whose practice is in honest dialogue with Country, ecology, or regenerative work. Tell us about your practice and what you\u2019d want to make here. The first residency becomes the case study.',
+    },
   },
   {
     slug: 'industry-residency-at-the-harvest',
@@ -79,6 +83,10 @@ export const experiences: Experience[] = [
       preferredMonths: true,
       duration: true,
       organisation: true,
+    },
+    inviteFirst: {
+      label: 'Be our first storytelling resident',
+      body: 'The Empathy Ledger Storytelling Residency is live and open. We\u2019re looking for the first storyteller to come through \u2014 someone ready to practice listening, consent, capture, and return at field scale on Country.',
     },
   },
 

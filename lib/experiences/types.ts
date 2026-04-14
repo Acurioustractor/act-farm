@@ -63,6 +63,15 @@ export type Experience = {
   caseStudySlugs?: string[];
   /** Direct-booking override — redirect /experiences/<slug> to /stay etc. */
   directBookingHref?: string;
+  /**
+   * When true, the detail page renders a "be our first" invitation
+   * alongside (or instead of) Related case studies. Use for experiences
+   * actively recruiting their inaugural cohort or first placement.
+   */
+  inviteFirst?: {
+    label: string; // eg. "Be our first placed artist"
+    body: string; // 1-2 sentences of context
+  };
 };
 
 export type CaseStudy = {
