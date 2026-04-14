@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HomeHero from '@/components/vision/HomeHero';
 import InteractiveMap from '@/components/map/InteractiveMap';
 import StoriesStrip from '@/components/sections/StoriesStrip';
+import CaseStudyStrip from '@/components/sections/CaseStudyStrip';
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
       {/* Stories strip — EL syndicated content, renders nothing if empty */}
       <StoriesStrip />
 
+      {/* Case studies strip — evidence from the catalog, renders nothing if empty */}
+      <CaseStudyStrip />
+
       {/* Contact CTA */}
       <section className="py-20 md:py-28 bg-site-surface">
         <div className="max-w-[720px] mx-auto px-4 text-center">
@@ -72,6 +76,8 @@ export default function Home() {
         <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap px-4">
           {[
             { href: '/stay', label: 'Stay' },
+            { href: '/experiences', label: 'Experiences' },
+            { href: '/case-studies', label: 'Case Studies' },
             { href: '/map', label: 'Explore the Map' },
             { href: '/use-the-farm', label: 'Use the Farm' },
             { href: '/residencies', label: 'Residencies' },
