@@ -180,6 +180,7 @@ export const experiences: Experience[] = [
       groupSize: true,
       organisation: true,
     },
+    caseStudySlugs: ['junes-patch-year-one-2025'],
   },
   {
     slug: 'dad-lab-at-bcv',

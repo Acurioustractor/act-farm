@@ -43,6 +43,17 @@ export const caseStudies: CaseStudy[] = [
     status: 'published',
   },
   {
+    slug: 'junes-patch-year-one-2025',
+    title: 'June\u2019s Patch Year One \u2014 the JCF partnership, 2024\u20132025',
+    summary:
+      'A multi-year partnership between ACT and the June Canavan Foundation, named for Dr June Canavan\u2019s belief in the health\u2013nature intersection. Year One was supposed to be about nature prescriptions for healthcare workers. What it actually became was a hybrid community that runs as much online as on the land, and that is now pivoting into food production as the next form of therapy.',
+    wikiPath: 'wiki/projects/act-farm/case-studies/junes-patch-year-one-2025.md',
+    period: 'Oct 2024 \u2013 Sep 2025 (Year One of 3)',
+    experienceSlugs: ['junes-patch-healthcare-retreat'],
+    themes: ['health', 'wellbeing', 'country', 'regenerative-practice'],
+    status: 'published',
+  },
+  {
     slug: 'dad-lab-bcv-2025',
     title: 'DAD.LAB \u2014 the inaugural cohort at BCV, 2025',
     summary:
