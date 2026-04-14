@@ -3,6 +3,7 @@ import HomeHero from '@/components/vision/HomeHero';
 import InteractiveMap from '@/components/map/InteractiveMap';
 import StoriesStrip from '@/components/sections/StoriesStrip';
 import CaseStudyStrip from '@/components/sections/CaseStudyStrip';
+import OpenInvitationsStrip from '@/components/sections/OpenInvitationsStrip';
 
 export default function Home() {
   return (
@@ -46,6 +47,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Open invitations — experiences actively recruiting their first cohort */}
+      <OpenInvitationsStrip />
 
       {/* Stories strip — EL syndicated content, renders nothing if empty */}
       <StoriesStrip />
