@@ -134,7 +134,7 @@ export default function VisionPage() {
         />
         <MomentSection
           title="Dawn on Country"
-          description="First light across 150 acres. A guided walk with someone who knows this land — not as a tour, but as an introduction. The cockatoos. The creek. The quiet before the day arrives."
+          description="First light across 138 acres. A guided walk with someone who knows this land — not as a tour, but as an introduction. The cockatoos. The creek. The quiet before the day arrives."
           detail="By arrangement"
           accentColor="text-amber-400"
           borderColor="border-amber-400/30"

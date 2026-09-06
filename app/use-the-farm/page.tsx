@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Use the Farm | Black Cockatoo Valley',
-  description: 'Workshops, events, weddings, retreats, and R&D residencies on 150 acres of Jinibara Country. Conservation-first, community-led.',
+  description: 'Workshops, events, weddings, retreats, and R&D residencies on 138 acres of Jinibara Country. Conservation-first, community-led.',
 };
 
 export default function UseTheFarmPage() {
@@ -16,7 +16,7 @@ export default function UseTheFarmPage() {
           </h1>
           <p className="text-xl text-site-muted leading-[1.7]">
             Black Cockatoo Valley is available for workshops, events, retreats,
-            and research residencies. 150 acres on Jinibara Country near Witta,
+            and research residencies. 138 acres on Jinibara Country near Witta,
             with views to the Mary River, native forest, and creek systems down
             to Elaman Creek. Everything we host supports conservation of
             threatened species habitat.
@@ -73,7 +73,7 @@ export default function UseTheFarmPage() {
           </div>
           <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
-              Low-key celebrations on 150 acres with views to the Mary River.
+              Low-key celebrations on 138 acres with views to the Mary River.
               This is rustic, not luxury — native forest, open sky, and the kind
               of quiet that makes a gathering feel different. Conservation-aligned,
               which means small groups, no heavy infrastructure, and genuine care
@@ -112,7 +112,7 @@ export default function UseTheFarmPage() {
           </div>
           <div className="space-y-6 text-site-muted text-lg leading-[1.7] mb-10">
             <p>
-              Eco-accommodation for small groups on conservation land. 150 acres
+              Eco-accommodation for small groups on conservation land. 138 acres
               of quiet — native forest, creek corridors, and threatened species
               habitat. Bring your own program or let us help design one around
               the land and its seasons.
@@ -127,7 +127,7 @@ export default function UseTheFarmPage() {
             <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">What to expect</h3>
             <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Private eco-accommodation on conservation land</li>
-              <li>Access to 150 acres of forest, trails, and creek systems</li>
+              <li>Access to 138 acres of forest, trails, and creek systems</li>
               <li>Off-grid quiet — no traffic, no noise</li>
               <li>Support to design a program if you need one</li>
               <li>Seasonal food from June's Patch garden</li>
@@ -189,7 +189,7 @@ export default function UseTheFarmPage() {
             <h3 className="font-sans font-semibold text-site-ink mb-3 text-sm tracking-wide">What's included</h3>
             <ul className="text-site-muted space-y-2 text-[15px]">
               <li>Eco-accommodation on conservation land</li>
-              <li>Full property access — 150 acres, trails, creek systems</li>
+              <li>Full property access — 138 acres, trails, creek systems</li>
               <li>Existing habitat data and monitoring infrastructure</li>
               <li>Research support and Jinibara Country connections</li>
               <li>Shared kitchen and workspace</li>

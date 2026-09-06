@@ -24,7 +24,7 @@ A complete Next.js website for A Curious Tractor Farm at Black Cockatoo Valley, 
 2. **About Page** ([about/page.tsx](app/about/page.tsx))
    - Mission and purpose
    - LCAA framework detailed explanation
-   - Land description (150 acres, Jinibara lands)
+   - Land description (138 acres, Jinibara lands)
    - Business model (low-volume premium approach)
    - "Beautiful obsolescence" vision
 

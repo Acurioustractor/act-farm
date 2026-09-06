@@ -31,7 +31,7 @@ export default function Home() {
             />
             <UseCaseCard
               title="Events & Weddings"
-              description="Low-key celebrations on 150 acres with views to the Mary River. Rustic, conservation-aligned, up to 40 people."
+              description="Low-key celebrations on 138 acres with views to the Mary River. Rustic, conservation-aligned, up to 40 people."
               href="/use-the-farm#events"
             />
             <UseCaseCard
