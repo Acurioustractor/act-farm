@@ -1,7 +1,7 @@
 # Decision: Interactive Drone Photo Map
 
 ## Context
-Need to showcase 150 acres of Black Cockatoo Valley to potential residents, partners, and funders without requiring physical visits.
+Need to showcase 138 acres of Black Cockatoo Valley to potential residents, partners, and funders without requiring physical visits.
 
 ## Decision
 Build interactive map with clickable location pins overlaid on actual drone photography, based on PICC Station pattern.

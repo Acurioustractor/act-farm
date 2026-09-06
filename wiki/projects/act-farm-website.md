@@ -13,7 +13,7 @@ Conservation-first website for Black Cockatoo Valley featuring interactive drone
 ## Why This Exists
 
 ### Business Problem
-- Need to showcase 150 acres of threatened species habitat on Jinibara lands
+- Need to showcase 138 acres of threatened species habitat on Jinibara lands
 - Communicate conservation-first approach (not extractive tourism)
 - Attract aligned R&D residents and workshop participants
 - Generate revenue through premium, low-volume model ($300-500/night residencies)
