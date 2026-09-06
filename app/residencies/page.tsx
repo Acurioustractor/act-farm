@@ -17,7 +17,7 @@ export default function ResidenciesPage() {
           Residencies
         </h1>
         <p className="text-xl md:text-2xl text-site-muted max-w-2xl leading-relaxed font-light">
-          One to four weeks on 150 acres of threatened species habitat. Space
+          One to four weeks on 138 acres of threatened species habitat. Space
           and time for people working on things that matter.
         </p>
         <p className="text-site-muted font-sans text-sm mt-6">
@@ -95,7 +95,7 @@ export default function ResidenciesPage() {
           <ul className="space-y-4 text-lg text-site-ink leading-relaxed">
             {[
               'Eco-accommodation on conservation land',
-              '150-acre property access — trails, creek systems, native forest',
+              '138 acres property access — trails, creek systems, native forest',
               'Existing habitat data and monitoring infrastructure',
               'Jinibara Country context and relationships',
               'Shared kitchen and workspace',

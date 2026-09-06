@@ -125,7 +125,7 @@ act-farm/
 
 ## Interactive Map
 
-The site features an interactive drone photo map based on the proven PICC Station pattern. Visitors can click on location pins to explore different areas of the 150-acre property.
+The site features an interactive drone photo map based on the proven PICC Station pattern. Visitors can click on location pins to explore different areas of the 138 acres property.
 
 **Features:**
 - Click pins to view location details, photos, activities, and habitat information

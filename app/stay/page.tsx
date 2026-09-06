@@ -3,7 +3,7 @@ import { accommodations, type Accommodation } from '@/lib/stay/accommodations';
 
 export const metadata = {
   title: 'Stay | Black Cockatoo Valley',
-  description: 'Unique eco-accommodation on 150 acres of Jinibara Country. The Pink Cabin and Train Carriage Lookout — outdoor baths, valley views, off-grid quiet.',
+  description: 'Unique eco-accommodation on 138 acres of Jinibara Country. The Pink Cabin and Train Carriage Lookout — outdoor baths, valley views, off-grid quiet.',
 };
 
 const reviews = [
@@ -52,7 +52,7 @@ export default function StayPage() {
             Stay at the Valley
           </h1>
           <p className="text-[clamp(1.1rem,2vw,1.5rem)] text-white/60 leading-relaxed mb-10">
-            Two unique places to sleep on 150 acres of conservation land in the Sunshine Coast
+            Two unique places to sleep on 138 acres of conservation land in the Sunshine Coast
             Hinterland. Outdoor baths, valley views, composting toilets, no phone reception.
             This is rustic, not luxury — and that's the point.
           </p>
@@ -118,7 +118,7 @@ export default function StayPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
             {[
-              'Access to 150 acres — trails, creeks, viewpoints',
+              'Access to 138 acres — trails, creeks, viewpoints',
               'Outdoor bathtub (most cabins)',
               'Fire pit and firewood (BYO or buy locally)',
               'Communal pizza oven and gathering area',

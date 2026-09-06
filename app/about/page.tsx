@@ -16,7 +16,7 @@ export default function AboutPage() {
             About Black Cockatoo Valley
           </h1>
           <p className="text-[clamp(1.1rem,2vw,1.5rem)] text-white/70 leading-relaxed">
-            150 acres of threatened species habitat. A living laboratory for
+            138 acres of threatened species habitat. A living laboratory for
             conservation, regenerative practice, and creative work grounded in Country.
           </p>
         </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light text-site-ink mb-10">The Country</h2>
           <div className="space-y-6 text-site-muted text-lg leading-[1.7]">
             <p>
-              Black Cockatoo Valley spans 150 acres on <strong className="text-site-ink">Jinibara Country</strong> near Witta, Queensland.
+              Black Cockatoo Valley spans 138 acres on <strong className="text-site-ink">Jinibara Country</strong> near Witta, Queensland.
               Views stretch to the Mary River headwaters, with creeks and forest winding down to Elaman Creek.
             </p>
             <p>

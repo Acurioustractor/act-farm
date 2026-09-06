@@ -17,7 +17,7 @@ export default function CountryPage() {
           Country
         </h1>
         <p className="text-xl md:text-2xl text-site-muted max-w-2xl leading-relaxed font-light">
-          150 acres of threatened species habitat. Views to the Mary River
+          138 acres of threatened species habitat. Views to the Mary River
           headwaters. A land that teaches, and a land that limits.
         </p>
       </section>
@@ -47,7 +47,7 @@ export default function CountryPage() {
       <section className="max-w-[960px] mx-auto px-4 py-20 md:py-28">
         <p className="ui-label text-site-muted mb-4">Habitat</p>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-light text-site-ink mb-10 leading-tight">
-          150 acres, threatened species
+          138 acres, threatened species
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Card

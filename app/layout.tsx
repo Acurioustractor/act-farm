@@ -24,7 +24,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Black Cockatoo Valley | Workshops, Events & Retreats on Jinibara Country",
-  description: "150 acres of threatened species habitat available for workshops, events, weddings, retreats, and R&D residencies. On Jinibara Country, Sunshine Coast Hinterland.",
+  description: "138 acres of threatened species habitat available for workshops, events, weddings, retreats, and R&D residencies. On Jinibara Country, Sunshine Coast Hinterland.",
 };
 
 export default function RootLayout({

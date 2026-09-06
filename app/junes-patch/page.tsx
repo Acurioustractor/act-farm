@@ -137,7 +137,7 @@ export default function JunesPatchPage() {
               title="Restorative Land Experiences"
               items={[
                 'Hands-on gardening and planting sessions',
-                'Guided walks through 150 acres of native forest',
+                'Guided walks through 138 acres of native forest',
                 'Shared meals using garden produce',
                 'Non-clinical outdoor time and restoration'
               ]}
@@ -179,7 +179,7 @@ export default function JunesPatchPage() {
             />
             <PartnerCard
               name="Black Cockatoo Valley"
-              description="The Country itself — 150 acres of threatened species habitat where restoration and wellbeing grow from the same soil."
+              description="The Country itself — 138 acres of threatened species habitat where restoration and wellbeing grow from the same soil."
             />
           </div>
         </div>
