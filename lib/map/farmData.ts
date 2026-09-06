@@ -14,7 +14,7 @@ import { MapData } from '@/types/map';
 export const farmData: MapData = {
   metadata: {
     title: 'Black Cockatoo Valley',
-    description: '150 acres of threatened species habitat on Jinibara Country',
+    description: '138 acres of threatened species habitat on Jinibara Country',
     totalAcres: 150,
     lastUpdated: '2025-12-23',
   },

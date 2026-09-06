@@ -49,7 +49,7 @@ export default function HomeHero() {
         />
 
         <h1 className="text-[clamp(1.3rem,3.5vw,2.2rem)] font-light leading-[1.3] text-white/70 max-w-2xl mx-auto mb-10" style={{ fontFamily: 'var(--font-body), Georgia, serif' }}>
-          150 acres of threatened species habitat available for workshops,
+          138 acres of threatened species habitat available for workshops,
           events, retreats, and research residencies.
         </h1>
 

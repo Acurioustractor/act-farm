@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-white text-xl font-semibold mb-4">A Curious Tractor Farm</h3>
             <p className="text-stone-400 mb-4 max-w-md">
-              Conservation-first residencies and regenerative practice on 150 acres
+              Conservation-first residencies and regenerative practice on 138 acres
               of Jinibara Country. Part of the A Curious Tractor ecosystem—growing
               seeds of justice, art, and shared stewardship.
             </p>

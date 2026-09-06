@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     category: 'stays',
     title: 'Stays at Black Cockatoo Valley',
     summary:
-      'Two cabins, 150 acres of Jinibara Country, and room to be quiet. The Pink Cabin and the Train Carriage are bookable directly. This is the self-guided end of the farm — you\u2019re on the land, we\u2019re light-touch hosts.',
+      'Two cabins, 138 acres of Jinibara Country, and room to be quiet. The Pink Cabin and the Train Carriage are bookable directly. This is the self-guided end of the farm — you\u2019re on the land, we\u2019re light-touch hosts.',
     wikiPath: 'wiki/projects/act-farm/experiences/stays.md',
     status: 'active',
     themes: ['country', 'wellbeing', 'regenerative-practice'],
